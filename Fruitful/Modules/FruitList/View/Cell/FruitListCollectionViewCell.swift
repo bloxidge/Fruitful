@@ -15,8 +15,9 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
     
     @IBInspectable
     var title: String? {
-        get { titleLabel.text }
-        set { titleLabel.text = newValue }
+        willSet {
+            titleLabel.text = newValue?.capitalized
+        }
     }
     
     override init(frame: CGRect) {
@@ -31,6 +32,6 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel.font = titleLabel.font.withSize(bounds.height / 4)
+        titleLabel.font = titleLabel.font.withSize(bounds.height / 5)
     }
 }

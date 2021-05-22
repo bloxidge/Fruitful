@@ -13,10 +13,10 @@ class FruitListViewController: UIViewController {
         static let cellSpacing: CGFloat = 16
     }
     
-    var presenter: FruitListPresenter!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var presenter: FruitListPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +54,7 @@ extension FruitListViewController: FruitListView {
     func showError() {
         activityIndicator.stopAnimating()
         collectionView.isHidden = true
+        // TODO: Show some sort of error alert/message
     }
 }
 
@@ -79,7 +80,9 @@ extension FruitListViewController: UICollectionViewDataSource {
 extension FruitListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if let selectedFruit = presenter.getFruit(at: indexPath.item) {
+            presenter.didSelect(fruit: selectedFruit)
+        }
     }
 }
 

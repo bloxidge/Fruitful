@@ -15,6 +15,7 @@ protocol FruitListPresenter: AnyObject {
     func reload()
     func getFruitCount() -> Int?
     func getFruit(at index: Int) -> Fruit?
+    func didSelect(fruit: Fruit)
 }
 
 class FruitListPresenterImpl: FruitListPresenter {
@@ -40,5 +41,9 @@ class FruitListPresenterImpl: FruitListPresenter {
     
     func getFruit(at index: Int) -> Fruit? {
         return interactor?.allFruit?[index]
+    }
+    
+    func didSelect(fruit: Fruit) {
+        router?.presentDetail(for: fruit)
     }
 }
