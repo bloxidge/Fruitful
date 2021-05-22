@@ -54,6 +54,7 @@ extension FruitListViewController: FruitListView {
     func showError() {
         activityIndicator.stopAnimating()
         collectionView.isHidden = true
+        // TODO: Show some sort of error alert/message
     }
 }
 

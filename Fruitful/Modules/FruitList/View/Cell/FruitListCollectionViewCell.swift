@@ -15,8 +15,9 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
     
     @IBInspectable
     var title: String? {
-        get { titleLabel.text }
-        set { titleLabel.text = newValue }
+        willSet {
+            titleLabel.text = newValue?.capitalized
+        }
     }
     
     override init(frame: CGRect) {

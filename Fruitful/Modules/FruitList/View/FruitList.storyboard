@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Apple"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="apple"/>
                                         </userDefinedRuntimeAttributes>
                                     </collectionViewCell>
                                 </cells>
