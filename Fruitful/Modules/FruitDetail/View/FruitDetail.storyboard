@@ -18,19 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-8C-Jya">
-                                <rect key="frame" x="32" y="122" width="350" height="105.5"/>
+                                <rect key="frame" x="20.5" y="122" width="373" height="104.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-pO-MDg">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymu-SS-8yg">
-                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="42"/>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="41"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="32"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£ 1.49" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-Er-1DM">
-                                                <rect key="frame" x="277" y="8" width="73" height="31.5"/>
+                                                <rect key="frame" x="300" y="7" width="73" height="31.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.120 kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxH-Ur-bIo">
-                                        <rect key="frame" x="0.0" y="74" width="350" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="73" width="373" height="31.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdH-Pb-bS2">
-                                <rect key="frame" x="32" y="60" width="30" height="30"/>
+                                <rect key="frame" x="20.5" y="60" width="30" height="30"/>
                                 <connections>
                                     <action selector="closePressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n6s-jf-zuA"/>
                                 </connections>
@@ -55,10 +55,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ORc-8C-Jya" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.9" id="9U5-VA-dDh"/>
+                            <constraint firstItem="ORc-8C-Jya" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="AH9-Jz-kbi"/>
                             <constraint firstItem="ORc-8C-Jya" firstAttribute="top" secondItem="TdH-Pb-bS2" secondAttribute="bottom" constant="32" id="Qbo-2V-sGD"/>
-                            <constraint firstItem="ORc-8C-Jya" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bMR-Rd-0eb"/>
-                            <constraint firstItem="ORc-8C-Jya" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="dLZ-Kr-f2i"/>
-                            <constraint firstItem="TdH-Pb-bS2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="kw7-r6-Qvu"/>
+                            <constraint firstItem="TdH-Pb-bS2" firstAttribute="leading" secondItem="Ymu-SS-8yg" secondAttribute="leading" id="ogT-Pi-jfB"/>
                             <constraint firstItem="TdH-Pb-bS2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="zgz-EG-wGz"/>
                         </constraints>
                     </view>
