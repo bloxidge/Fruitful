@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD53C9082659193C0046D485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9072659193C0046D485 /* AppDelegate.swift */; };
+		FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C90B2659193C0046D485 /* FruitListViewController.swift */; };
+		FD53C9112659193F0046D485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9102659193F0046D485 /* Assets.xcassets */; };
+		FD53C9142659193F0046D485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9122659193F0046D485 /* LaunchScreen.storyboard */; };
+		FD53C91F2659193F0046D485 /* FruitfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C91E2659193F0046D485 /* FruitfulTests.swift */; };
+		FD53C945265935330046D485 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD53C944265935330046D485 /* PromiseKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD53C91B2659193F0046D485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD53C8FC2659193C0046D485 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD53C9032659193C0046D485;
+			remoteInfo = Fruitful;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD53C9042659193C0046D485 /* Fruitful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruitful.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD53C9072659193C0046D485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FD53C90B2659193C0046D485 /* FruitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewController.swift; sourceTree = "<group>"; };
+		FD53C9102659193F0046D485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD53C9132659193F0046D485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD53C9152659193F0046D485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD53C91A2659193F0046D485 /* FruitfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitfulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD53C91E2659193F0046D485 /* FruitfulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitfulTests.swift; sourceTree = "<group>"; };
+		FD53C9202659193F0046D485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD53C9012659193C0046D485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD53C945265935330046D485 /* PromiseKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD53C9172659193F0046D485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD53C8FB2659193C0046D485 = {
+			isa = PBXGroup;
+			children = (
+				FD53C9062659193C0046D485 /* Fruitful */,
+				FD53C91D2659193F0046D485 /* FruitfulTests */,
+				FD53C9052659193C0046D485 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD53C9052659193C0046D485 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C9042659193C0046D485 /* Fruitful.app */,
+				FD53C91A2659193F0046D485 /* FruitfulTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD53C9062659193C0046D485 /* Fruitful */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C93B265929420046D485 /* Modules */,
+				FD53C93E265929E60046D485 /* Services */,
+				FD53C93A265928630046D485 /* Supporting Files */,
+			);
+			path = Fruitful;
+			sourceTree = "<group>";
+		};
+		FD53C91D2659193F0046D485 /* FruitfulTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C91E2659193F0046D485 /* FruitfulTests.swift */,
+				FD53C94226592D250046D485 /* Supporting Files */,
+			);
+			path = FruitfulTests;
+			sourceTree = "<group>";
+		};
+		FD53C93A265928630046D485 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C9102659193F0046D485 /* Assets.xcassets */,
+				FD53C9122659193F0046D485 /* LaunchScreen.storyboard */,
+				FD53C9072659193C0046D485 /* AppDelegate.swift */,
+				FD53C9152659193F0046D485 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD53C93B265929420046D485 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C93C265929560046D485 /* FruitList */,
+				FD53C93D265929D40046D485 /* FruitDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FD53C93C265929560046D485 /* FruitList */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C94126592C0F0046D485 /* View */,
+			);
+			path = FruitList;
+			sourceTree = "<group>";
+		};
+		FD53C93D265929D40046D485 /* FruitDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FruitDetail;
+			sourceTree = "<group>";
+		};
+		FD53C93E265929E60046D485 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C94026592BF30046D485 /* Analytics */,
+				FD53C93F26592BDD0046D485 /* Api */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD53C93F26592BDD0046D485 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		FD53C94026592BF30046D485 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		FD53C94126592C0F0046D485 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C90B2659193C0046D485 /* FruitListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD53C94226592D250046D485 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C9202659193F0046D485 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD53C9032659193C0046D485 /* Fruitful */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD53C92E2659193F0046D485 /* Build configuration list for PBXNativeTarget "Fruitful" */;
+			buildPhases = (
+				FD53C9002659193C0046D485 /* Sources */,
+				FD53C9012659193C0046D485 /* Frameworks */,
+				FD53C9022659193C0046D485 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fruitful;
+			packageProductDependencies = (
+				FD53C944265935330046D485 /* PromiseKit */,
+			);
+			productName = Fruitful;
+			productReference = FD53C9042659193C0046D485 /* Fruitful.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD53C9192659193F0046D485 /* FruitfulTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD53C9312659193F0046D485 /* Build configuration list for PBXNativeTarget "FruitfulTests" */;
+			buildPhases = (
+				FD53C9162659193F0046D485 /* Sources */,
+				FD53C9172659193F0046D485 /* Frameworks */,
+				FD53C9182659193F0046D485 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD53C91C2659193F0046D485 /* PBXTargetDependency */,
+			);
+			name = FruitfulTests;
+			productName = FruitfulTests;
+			productReference = FD53C91A2659193F0046D485 /* FruitfulTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD53C8FC2659193C0046D485 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					FD53C9032659193C0046D485 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					FD53C9192659193F0046D485 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = FD53C9032659193C0046D485;
+					};
+				};
+			};
+			buildConfigurationList = FD53C8FF2659193C0046D485 /* Build configuration list for PBXProject "Fruitful" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD53C8FB2659193C0046D485;
+			packageReferences = (
+				FD53C9372659264B0046D485 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
+			productRefGroup = FD53C9052659193C0046D485 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD53C9032659193C0046D485 /* Fruitful */,
+				FD53C9192659193F0046D485 /* FruitfulTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD53C9022659193C0046D485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD53C9142659193F0046D485 /* LaunchScreen.storyboard in Resources */,
+				FD53C9112659193F0046D485 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD53C9182659193F0046D485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD53C9002659193C0046D485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */,
+				FD53C9082659193C0046D485 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD53C9162659193F0046D485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD53C91F2659193F0046D485 /* FruitfulTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD53C91C2659193F0046D485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD53C9032659193C0046D485 /* Fruitful */;
+			targetProxy = FD53C91B2659193F0046D485 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FD53C9122659193F0046D485 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD53C9132659193F0046D485 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FD53C92C2659193F0046D485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD53C92D2659193F0046D485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD53C92F2659193F0046D485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Fruitful/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bloxidge.Fruitful;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD53C9302659193F0046D485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Fruitful/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bloxidge.Fruitful;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD53C9322659193F0046D485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FruitfulTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bloxidge.FruitfulTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fruitful.app/Fruitful";
+			};
+			name = Debug;
+		};
+		FD53C9332659193F0046D485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FruitfulTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bloxidge.FruitfulTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fruitful.app/Fruitful";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD53C8FF2659193C0046D485 /* Build configuration list for PBXProject "Fruitful" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD53C92C2659193F0046D485 /* Debug */,
+				FD53C92D2659193F0046D485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD53C92E2659193F0046D485 /* Build configuration list for PBXNativeTarget "Fruitful" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD53C92F2659193F0046D485 /* Debug */,
+				FD53C9302659193F0046D485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD53C9312659193F0046D485 /* Build configuration list for PBXNativeTarget "FruitfulTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD53C9322659193F0046D485 /* Debug */,
+				FD53C9332659193F0046D485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD53C9372659264B0046D485 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD53C944265935330046D485 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD53C9372659264B0046D485 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FD53C8FC2659193C0046D485 /* Project object */;
+}
