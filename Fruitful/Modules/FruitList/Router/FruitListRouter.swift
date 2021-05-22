@@ -7,23 +7,17 @@
 
 import UIKit
 
-protocol Router: AnyObject {
-    static func createModule() -> UIViewController
+protocol FruitListRouter: AnyObject {
+    func presentDetail(for fruit: Fruit)
 }
 
-class FruitListRouter: Router {
+class FruitListRouterImpl: FruitListRouter {
     
-    static func createModule() -> UIViewController {
-        let view = FruitListViewController.instantiateFromStoryboard(name: "FruitList")
-        let presenter = FruitListPresenterImpl()
-        let interactor = FruitListInteractorImpl()
-        let router = FruitListRouter()
-        
-        view.presenter = presenter
-        presenter.view = view
-        presenter.router = router
-        presenter.interactor = interactor
-        
-        return view
+    weak var viewController: UIViewController?
+    
+    func presentDetail(for fruit: Fruit) {
+        let detailViewController = FruitDetailModule.build(fruit: fruit)
+        detailViewController.modalPresentationStyle = .fullScreen
+        viewController?.present(detailViewController, animated: true, completion: nil)
     }
 }
