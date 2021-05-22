@@ -13,6 +13,18 @@
 		FD53C9142659193F0046D485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9122659193F0046D485 /* LaunchScreen.storyboard */; };
 		FD53C91F2659193F0046D485 /* FruitfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C91E2659193F0046D485 /* FruitfulTests.swift */; };
 		FD53C945265935330046D485 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD53C944265935330046D485 /* PromiseKit */; };
+		FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C94B265939D50046D485 /* FruitListInteractor.swift */; };
+		FD53C94E26593A010046D485 /* FruitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C94D26593A010046D485 /* FruitListPresenter.swift */; };
+		FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C94F26593ADC0046D485 /* FruitListRouter.swift */; };
+		FD53C952265953690046D485 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C951265953690046D485 /* Fruit.swift */; };
+		FD53C9592659582F0046D485 /* FruitListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9572659582F0046D485 /* FruitListCollectionViewCell.swift */; };
+		FD53C95A2659582F0046D485 /* FruitListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9582659582F0046D485 /* FruitListCollectionViewCell.xib */; };
+		FD53C95D265959780046D485 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C95C265959780046D485 /* DesignableView.swift */; };
+		FD53C95F265967260046D485 /* FruitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C95E265967260046D485 /* FruitListView.swift */; };
+		FD53C9612659E2080046D485 /* FruitList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9602659E2080046D485 /* FruitList.storyboard */; };
+		FD53C9632659E7E20046D485 /* UIViewController+storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */; };
+		FD53C98A2659F3A60046D485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9892659F3A60046D485 /* SceneDelegate.swift */; };
+		FD53C98C2659F7970046D485 /* NibBackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C98B2659F7970046D485 /* NibBackedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,18 @@
 		FD53C91A2659193F0046D485 /* FruitfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitfulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD53C91E2659193F0046D485 /* FruitfulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitfulTests.swift; sourceTree = "<group>"; };
 		FD53C9202659193F0046D485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD53C94B265939D50046D485 /* FruitListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListInteractor.swift; sourceTree = "<group>"; };
+		FD53C94D26593A010046D485 /* FruitListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListPresenter.swift; sourceTree = "<group>"; };
+		FD53C94F26593ADC0046D485 /* FruitListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListRouter.swift; sourceTree = "<group>"; };
+		FD53C951265953690046D485 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		FD53C9572659582F0046D485 /* FruitListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD53C9582659582F0046D485 /* FruitListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FruitListCollectionViewCell.xib; sourceTree = "<group>"; };
+		FD53C95C265959780046D485 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		FD53C95E265967260046D485 /* FruitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListView.swift; sourceTree = "<group>"; };
+		FD53C9602659E2080046D485 /* FruitList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitList.storyboard; sourceTree = "<group>"; };
+		FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+storyboard.swift"; sourceTree = "<group>"; };
+		FD53C9892659F3A60046D485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FD53C98B2659F7970046D485 /* NibBackedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBackedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +103,7 @@
 			children = (
 				FD53C93B265929420046D485 /* Modules */,
 				FD53C93E265929E60046D485 /* Services */,
+				FD53C95B265959550046D485 /* Utilities */,
 				FD53C93A265928630046D485 /* Supporting Files */,
 			);
 			path = Fruitful;
@@ -99,6 +124,7 @@
 				FD53C9102659193F0046D485 /* Assets.xcassets */,
 				FD53C9122659193F0046D485 /* LaunchScreen.storyboard */,
 				FD53C9072659193C0046D485 /* AppDelegate.swift */,
+				FD53C9892659F3A60046D485 /* SceneDelegate.swift */,
 				FD53C9152659193F0046D485 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -117,6 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				FD53C94126592C0F0046D485 /* View */,
+				FD53C9462659360F0046D485 /* Interactor */,
+				FD53C9472659362B0046D485 /* Presenter */,
+				FD53C953265955250046D485 /* Entities */,
+				FD53C948265936410046D485 /* Router */,
 			);
 			path = FruitList;
 			sourceTree = "<group>";
@@ -154,7 +184,10 @@
 		FD53C94126592C0F0046D485 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD53C9562659580D0046D485 /* Cell */,
+				FD53C95E265967260046D485 /* FruitListView.swift */,
 				FD53C90B2659193C0046D485 /* FruitListViewController.swift */,
+				FD53C9602659E2080046D485 /* FruitList.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +198,65 @@
 				FD53C9202659193F0046D485 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD53C9462659360F0046D485 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C94B265939D50046D485 /* FruitListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FD53C9472659362B0046D485 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C94D26593A010046D485 /* FruitListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FD53C948265936410046D485 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C94F26593ADC0046D485 /* FruitListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FD53C953265955250046D485 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C951265953690046D485 /* Fruit.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FD53C9562659580D0046D485 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C9572659582F0046D485 /* FruitListCollectionViewCell.swift */,
+				FD53C9582659582F0046D485 /* FruitListCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FD53C95B265959550046D485 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C9642659EA8C0046D485 /* Extensions */,
+				FD53C95C265959780046D485 /* DesignableView.swift */,
+				FD53C98B2659F7970046D485 /* NibBackedView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FD53C9642659EA8C0046D485 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,7 +345,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD53C95A2659582F0046D485 /* FruitListCollectionViewCell.xib in Resources */,
 				FD53C9142659193F0046D485 /* LaunchScreen.storyboard in Resources */,
+				FD53C9612659E2080046D485 /* FruitList.storyboard in Resources */,
 				FD53C9112659193F0046D485 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,8 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD53C94E26593A010046D485 /* FruitListPresenter.swift in Sources */,
+				FD53C95F265967260046D485 /* FruitListView.swift in Sources */,
+				FD53C9632659E7E20046D485 /* UIViewController+storyboard.swift in Sources */,
+				FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */,
+				FD53C9592659582F0046D485 /* FruitListCollectionViewCell.swift in Sources */,
+				FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */,
+				FD53C952265953690046D485 /* Fruit.swift in Sources */,
+				FD53C98A2659F3A60046D485 /* SceneDelegate.swift in Sources */,
+				FD53C98C2659F7970046D485 /* NibBackedView.swift in Sources */,
 				FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */,
 				FD53C9082659193C0046D485 /* AppDelegate.swift in Sources */,
+				FD53C95D265959780046D485 /* DesignableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +534,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Fruitful/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +554,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Fruitful/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
