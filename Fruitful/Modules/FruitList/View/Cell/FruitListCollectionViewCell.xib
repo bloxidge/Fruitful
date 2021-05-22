@@ -15,12 +15,12 @@
             </connections>
         </placeholder>
         <view contentMode="scaleToFill" id="WhH-GE-lny" customClass="DesignableView" customModule="Fruitful" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHa-XE-wMx">
-                    <rect key="frame" x="91.5" y="109.5" width="73.5" height="37"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="jHa-XE-wMx">
+                    <rect key="frame" x="72.5" y="59.5" width="55.5" height="31.5"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -29,7 +29,7 @@
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="jHa-XE-wMx" firstAttribute="centerX" secondItem="WhH-GE-lny" secondAttribute="centerX" id="Xbd-mV-Djn"/>
-                <constraint firstItem="jHa-XE-wMx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WhH-GE-lny" secondAttribute="leading" constant="16" id="iQh-ET-j4o"/>
+                <constraint firstItem="jHa-XE-wMx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WhH-GE-lny" secondAttribute="leading" constant="8" id="iQh-ET-j4o"/>
                 <constraint firstItem="jHa-XE-wMx" firstAttribute="centerY" secondItem="WhH-GE-lny" secondAttribute="centerY" id="p81-BC-7it"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -28,4 +28,9 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
         super.init(coder: coder)
         loadFromNib()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        titleLabel.font = titleLabel.font.withSize(bounds.height / 4)
+    }
 }
