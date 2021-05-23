@@ -36,6 +36,17 @@ class FruitListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+    private func presentErrorAlert(message: String) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] _ in
+            self?.presenter.reload()
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(retryAction)
+        present(alertController, animated: true)
+    }
 }
 
 extension FruitListViewController: FruitListView {
@@ -54,7 +65,7 @@ extension FruitListViewController: FruitListView {
     func showError() {
         activityIndicator.stopAnimating()
         collectionView.isHidden = true
-        // TODO: Show some sort of error alert/message
+        presentErrorAlert(message: "Oops, something went wrong. Please try again.")
     }
 }
 
