@@ -60,7 +60,7 @@ class FruitListViewController: UIViewController {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] _ in
-            self?.presenter.reload()
+            self?.presenter.reload(showLoading: true)
         }
         alertController.addAction(cancelAction)
         alertController.addAction(retryAction)
