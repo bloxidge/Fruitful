@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Fruit {
+struct Fruit: Decodable {
     let type: String
     let price: UInt
     let weight: UInt

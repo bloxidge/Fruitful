@@ -32,6 +32,14 @@
 		FD53C9632659E7E20046D485 /* UIViewController+storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */; };
 		FD53C98A2659F3A60046D485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9892659F3A60046D485 /* SceneDelegate.swift */; };
 		FD53C98C2659F7970046D485 /* NibBackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C98B2659F7970046D485 /* NibBackedView.swift */; };
+		FD701591265BC54500E72899 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD701590265BC54500E72899 /* ApiService.swift */; };
+		FD701593265BC60A00E72899 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD701592265BC60A00E72899 /* Request.swift */; };
+		FD701595265BC60A00E72899 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD701594265BC60A00E72899 /* HttpMethod.swift */; };
+		FD701598265BC60A00E72899 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD701597265BC60A00E72899 /* HttpHeader.swift */; };
+		FD70159B265BC60A00E72899 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70159A265BC60A00E72899 /* URLRequestBuilder.swift */; };
+		FD70159D265BC60A00E72899 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70159C265BC60A00E72899 /* ApiError.swift */; };
+		FD7015A2265BC60A00E72899 /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD7015A1265BC60A00E72899 /* PMKFoundation */; };
+		FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */; };
 		FDEACC2F2659C62600D0A756 /* FruitDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +82,13 @@
 		FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+storyboard.swift"; sourceTree = "<group>"; };
 		FD53C9892659F3A60046D485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FD53C98B2659F7970046D485 /* NibBackedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBackedView.swift; sourceTree = "<group>"; };
+		FD701590265BC54500E72899 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FD701592265BC60A00E72899 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FD701594265BC60A00E72899 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		FD701597265BC60A00E72899 /* HttpHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
+		FD70159A265BC60A00E72899 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		FD70159C265BC60A00E72899 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitDataRequest.swift; sourceTree = "<group>"; };
 		FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7015A2265BC60A00E72899 /* PMKFoundation in Frameworks */,
 				FD53C945265935330046D485 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +242,9 @@
 		FD53C93F26592BDD0046D485 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				FD701596265BC60A00E72899 /* Request */,
+				FD701590265BC54500E72899 /* ApiService.swift */,
+				FD70159C265BC60A00E72899 /* ApiError.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -284,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				FD53C951265953690046D485 /* Fruit.swift */,
+				FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -315,6 +335,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FD701596265BC60A00E72899 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FD701599265BC60A00E72899 /* Builder */,
+				FD701594265BC60A00E72899 /* HttpMethod.swift */,
+				FD701597265BC60A00E72899 /* HttpHeader.swift */,
+				FD701592265BC60A00E72899 /* Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		FD701599265BC60A00E72899 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				FD70159A265BC60A00E72899 /* URLRequestBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,6 +372,7 @@
 			name = Fruitful;
 			packageProductDependencies = (
 				FD53C944265935330046D485 /* PromiseKit */,
+				FD7015A1265BC60A00E72899 /* PMKFoundation */,
 			);
 			productName = Fruitful;
 			productReference = FD53C9042659193C0046D485 /* Fruitful.app */;
@@ -385,6 +425,7 @@
 			mainGroup = FD53C8FB2659193C0046D485;
 			packageReferences = (
 				FD53C9372659264B0046D485 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				FD7015A0265BC60A00E72899 /* XCRemoteSwiftPackageReference "Foundation" */,
 			);
 			productRefGroup = FD53C9052659193C0046D485 /* Products */;
 			projectDirPath = "";
@@ -427,6 +468,8 @@
 				FD53C94E26593A010046D485 /* FruitListPresenter.swift in Sources */,
 				FD53C95F265967260046D485 /* FruitListView.swift in Sources */,
 				FD53C9632659E7E20046D485 /* UIViewController+storyboard.swift in Sources */,
+				FD701593265BC60A00E72899 /* Request.swift in Sources */,
+				FD70159B265BC60A00E72899 /* URLRequestBuilder.swift in Sources */,
 				FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */,
 				FD53C9592659582F0046D485 /* FruitListCollectionViewCell.swift in Sources */,
 				FD2E0990265963F6006D3459 /* FruitDetailRouter.swift in Sources */,
@@ -434,13 +477,18 @@
 				FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */,
 				FD2E09922659692B006D3459 /* FruitDetailModule.swift in Sources */,
 				FD53C952265953690046D485 /* Fruit.swift in Sources */,
+				FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */,
 				FD2E099426596B52006D3459 /* FruitListModule.swift in Sources */,
 				FD53C98A2659F3A60046D485 /* SceneDelegate.swift in Sources */,
 				FD53C98C2659F7970046D485 /* NibBackedView.swift in Sources */,
+				FD701595265BC60A00E72899 /* HttpMethod.swift in Sources */,
 				FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */,
 				FD53C9082659193C0046D485 /* AppDelegate.swift in Sources */,
 				FD53C95D265959780046D485 /* DesignableView.swift in Sources */,
 				FD2E098F265963F6006D3459 /* FruitDetailInteractor.swift in Sources */,
+				FD701598265BC60A00E72899 /* HttpHeader.swift in Sources */,
+				FD701591265BC54500E72899 /* ApiService.swift in Sources */,
+				FD70159D265BC60A00E72899 /* ApiError.swift in Sources */,
 				FD2E098D265963F6006D3459 /* FruitDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +762,14 @@
 				minimumVersion = 6.13.0;
 			};
 		};
+		FD7015A0265BC60A00E72899 /* XCRemoteSwiftPackageReference "Foundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PromiseKit/Foundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -721,6 +777,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD53C9372659264B0046D485 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
+		};
+		FD7015A1265BC60A00E72899 /* PMKFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD7015A0265BC60A00E72899 /* XCRemoteSwiftPackageReference "Foundation" */;
+			productName = PMKFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
