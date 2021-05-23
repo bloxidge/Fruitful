@@ -15,6 +15,8 @@ class FruitListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noResultsContainer: UIStackView!
+    @IBOutlet weak var reloadButton: RoundedBorderButton!
     
     var presenter: FruitListPresenter!
     
@@ -36,6 +38,10 @@ class FruitListViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+    @IBAction func reloadPressed() {
+        presenter.reload()
+    }
 }
 
 extension FruitListViewController: FruitListView {
@@ -43,12 +49,21 @@ extension FruitListViewController: FruitListView {
     func showLoading() {
         activityIndicator.startAnimating()
         collectionView.isHidden = true
+        noResultsContainer.isHidden = true
     }
     
-    func showFruitList() {
+    func showPopulatedList() {
         activityIndicator.stopAnimating()
         collectionView.reloadData()
         collectionView.isHidden = false
+        noResultsContainer.isHidden = true
+    }
+    
+    func showEmptyList() {
+        activityIndicator.stopAnimating()
+        collectionView.reloadData()
+        collectionView.isHidden = true
+        noResultsContainer.isHidden = false
     }
     
     func showError() {

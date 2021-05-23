@@ -9,6 +9,7 @@ import Foundation
 
 protocol FruitListView {
     func showLoading()
-    func showFruitList()
+    func showPopulatedList()
+    func showEmptyList()
     func showError()
 }

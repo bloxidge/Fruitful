@@ -28,7 +28,11 @@ class FruitListPresenterImpl: FruitListPresenter {
         view?.showLoading()
         interactor?.fetchAllFruit()
             .done { [weak self] fruit in
-                self?.view?.showFruitList()
+                if fruit.isEmpty {
+                    self?.view?.showEmptyList()
+                } else {
+                    self?.view?.showPopulatedList()
+                }
             }
             .catch { [weak self] _ in
                 self?.view?.showError()

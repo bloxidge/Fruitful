@@ -40,6 +40,7 @@
 		FD70159D265BC60A00E72899 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD70159C265BC60A00E72899 /* ApiError.swift */; };
 		FD7015A2265BC60A00E72899 /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD7015A1265BC60A00E72899 /* PMKFoundation */; };
 		FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */; };
+		FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */; };
 		FDEACC2F2659C62600D0A756 /* FruitDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		FD70159A265BC60A00E72899 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		FD70159C265BC60A00E72899 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitDataRequest.swift; sourceTree = "<group>"; };
+		FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
 		FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 		FD53C9062659193C0046D485 /* Fruitful */ = {
 			isa = PBXGroup;
 			children = (
+				FD75F848265A9C62004416E1 /* Components */,
 				FD53C93B265929420046D485 /* Modules */,
 				FD53C93E265929E60046D485 /* Services */,
 				FD53C95B265959550046D485 /* Utilities */,
@@ -354,6 +357,14 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		FD75F848265A9C62004416E1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -473,6 +484,7 @@
 				FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */,
 				FD53C9592659582F0046D485 /* FruitListCollectionViewCell.swift in Sources */,
 				FD2E0990265963F6006D3459 /* FruitDetailRouter.swift in Sources */,
+				FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */,
 				FD2E098C265963F6006D3459 /* FruitDetailView.swift in Sources */,
 				FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */,
 				FD2E09922659692B006D3459 /* FruitDetailModule.swift in Sources */,
