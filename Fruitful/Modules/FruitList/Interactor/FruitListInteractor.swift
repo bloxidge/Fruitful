@@ -18,25 +18,25 @@ class FruitListInteractorImpl: FruitListInteractor {
     
     var allFruit: [Fruit]?
     
+    let api: ApiService
+    
+    init(api: ApiService) {
+        self.api = api
+    }
+    
     func fetchAllFruit() -> Promise<[Fruit]> {
         return Promise<[Fruit]> { resolver in
             if let fruit = allFruit {
                 resolver.fulfill(fruit)
             } else {
-                // TODO: Replace with API call
-                waitForStubbedFruit()
+                api.send(request: GetFruitDataRequest())
+                    .map { $0.fruit }
                     .done {
                         self.allFruit = $0
                         resolver.fulfill($0)
                     }
             }
         }
-    }
-    
-    // TODO: Remove once API service in place
-    private func waitForStubbedFruit() -> Guarantee<[Fruit]> {
-        after(seconds: 1.0)
-            .map { fruitStub }
     }
 }
 

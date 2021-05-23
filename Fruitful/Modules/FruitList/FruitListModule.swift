@@ -12,7 +12,7 @@ class FruitListModule {
     static func build() -> UIViewController {
         let view = FruitListViewController.instantiateFromStoryboard(name: "FruitList")
         let presenter = FruitListPresenterImpl()
-        let interactor = FruitListInteractorImpl()
+        let interactor = FruitListInteractorImpl(api: ApiServiceImpl(requestBuilder: URLRequestBuilderImpl()))
         let router = FruitListRouterImpl()
         
         view.presenter = presenter
