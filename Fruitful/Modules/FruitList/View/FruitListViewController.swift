@@ -15,6 +15,8 @@ class FruitListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noResultsContainer: UIStackView!
+    @IBOutlet weak var reloadButton: RoundedBorderButton!
     
     var presenter: FruitListPresenter!
     
@@ -23,7 +25,7 @@ class FruitListViewController: UIViewController {
         
         setUpCollectionView()
         
-        presenter.reload()
+        presenter.reload(showLoading: true)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -35,6 +37,23 @@ class FruitListViewController: UIViewController {
     private func setUpCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.addRefreshControl { [weak self] in
+            guard let self = self else { return }
+            if !self.collectionView.isDragging {
+                self.refresh()
+            }
+        }
+    }
+    
+    private func refresh() {
+        presenter.reload(showLoading: false)
+            .ensure { [weak self] in
+                self?.collectionView.endRefreshing()
+            }.cauterize()
+    }
+    
+    @IBAction func reloadPressed() {
+        presenter.reload(showLoading: true)
     }
 }
 
@@ -43,12 +62,21 @@ extension FruitListViewController: FruitListView {
     func showLoading() {
         activityIndicator.startAnimating()
         collectionView.isHidden = true
+        noResultsContainer.isHidden = true
     }
     
-    func showFruitList() {
+    func showPopulatedList() {
         activityIndicator.stopAnimating()
         collectionView.reloadData()
         collectionView.isHidden = false
+        noResultsContainer.isHidden = true
+    }
+    
+    func showEmptyList() {
+        activityIndicator.stopAnimating()
+        collectionView.reloadData()
+        collectionView.isHidden = true
+        noResultsContainer.isHidden = false
     }
     
     func showError() {
@@ -110,5 +138,12 @@ extension FruitListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-
+extension FruitListViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.isRefreshing {
+            refresh()
+        }
+    }
+}
 
