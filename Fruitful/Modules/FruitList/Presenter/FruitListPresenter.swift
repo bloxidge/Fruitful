@@ -6,13 +6,15 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol FruitListPresenter: AnyObject {
-    var view: FruitListView? { get set }
-    var interactor: FruitListInteractor? { get set }
-    var router: FruitListRouter? { get set }
+    var view: FruitListView! { get set }
+    var interactor: FruitListInteractor! { get set }
+    var router: FruitListRouter! { get set }
     
-    func reload()
+    @discardableResult
+    func reload(showLoading: Bool) -> Promise<Void>
     func getFruitCount() -> Int?
     func getFruit(at index: Int) -> Fruit?
     func didSelect(fruit: Fruit)
@@ -20,34 +22,38 @@ protocol FruitListPresenter: AnyObject {
 
 class FruitListPresenterImpl: FruitListPresenter {
     
-    var view: FruitListView?
-    var interactor: FruitListInteractor?
-    var router: FruitListRouter?
+    var view: FruitListView!
+    var interactor: FruitListInteractor!
+    var router: FruitListRouter!
     
-    func reload() {
-        view?.showLoading()
-        interactor?.fetchAllFruit()
-            .done { [weak self] fruit in
+    @discardableResult
+    func reload(showLoading: Bool) -> Promise<Void> {
+        if showLoading {
+            view.showLoading()
+        }
+        
+        let promise = interactor.fetchAllFruit()
+        promise.done { [weak self] fruit in
                 if fruit.isEmpty {
-                    self?.view?.showEmptyList()
+                    self?.view.showEmptyList()
                 } else {
-                    self?.view?.showPopulatedList()
+                    self?.view.showPopulatedList()
                 }
+            }.catch { [weak self] _ in
+                self?.view.showError()
             }
-            .catch { [weak self] _ in
-                self?.view?.showError()
-            }
+        return promise.asVoid()
     }
     
     func getFruitCount() -> Int? {
-        return interactor?.allFruit?.count
+        return interactor.allFruit?.count
     }
     
     func getFruit(at index: Int) -> Fruit? {
-        return interactor?.allFruit?[index]
+        return interactor.allFruit?[index]
     }
     
     func didSelect(fruit: Fruit) {
-        router?.presentDetail(for: fruit)
+        router.presentDetail(for: fruit)
     }
 }

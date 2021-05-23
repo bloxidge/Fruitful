@@ -41,6 +41,7 @@
 		FD7015A2265BC60A00E72899 /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD7015A1265BC60A00E72899 /* PMKFoundation */; };
 		FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */; };
 		FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */; };
+		FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */; };
 		FDEACC2F2659C62600D0A756 /* FruitDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		FD70159C265BC60A00E72899 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitDataRequest.swift; sourceTree = "<group>"; };
 		FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+refresh.swift"; sourceTree = "<group>"; };
 		FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */,
+				FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				FD2E0990265963F6006D3459 /* FruitDetailRouter.swift in Sources */,
 				FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */,
 				FD2E098C265963F6006D3459 /* FruitDetailView.swift in Sources */,
+				FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */,
 				FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */,
 				FD2E09922659692B006D3459 /* FruitDetailModule.swift in Sources */,
 				FD53C952265953690046D485 /* Fruit.swift in Sources */,
@@ -658,7 +662,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Fruitful/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,7 +682,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Fruitful/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
