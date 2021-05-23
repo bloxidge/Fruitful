@@ -42,8 +42,37 @@
                                 </cells>
                             </collectionView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qRh-Vv-QiQ">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
                             </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kbZ-j1-USA">
+                                <rect key="frame" x="147" y="399.5" width="120" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBD-oj-ztn">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <color key="textColor" systemColor="placeholderTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0U-6Z-Xgl" customClass="RoundedBorderButton" customModule="Fruitful" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="37" width="72" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="u3p-JB-j1F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                        <state key="normal" title="Reload">
+                                            <color key="titleColor" systemColor="placeholderTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="reloadPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EdB-ac-t5g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,12 +82,16 @@
                             <constraint firstItem="ni3-he-wlU" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="K5U-nY-BxI"/>
                             <constraint firstItem="ni3-he-wlU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z6p-Ci-saG"/>
                             <constraint firstItem="ni3-he-wlU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="c68-fV-JUX"/>
-                            <constraint firstItem="qRh-Vv-QiQ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="k5s-B2-jXK"/>
+                            <constraint firstItem="kbZ-j1-USA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gzw-J9-Nx7"/>
+                            <constraint firstItem="qRh-Vv-QiQ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="k5s-B2-jXK"/>
+                            <constraint firstItem="P0U-6Z-Xgl" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="rgM-jh-Qkf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="qRh-Vv-QiQ" id="Nld-sh-eFf"/>
                         <outlet property="collectionView" destination="ni3-he-wlU" id="OTo-7n-amb"/>
+                        <outlet property="noResultsContainer" destination="kbZ-j1-USA" id="RlF-Pd-REy"/>
+                        <outlet property="reloadButton" destination="P0U-6Z-Xgl" id="WLf-CA-lwK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -66,7 +99,15 @@
             <point key="canvasLocation" x="53.623188405797109" y="47.544642857142854"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="P0U-6Z-Xgl">
+            <size key="intrinsicContentSize" width="52" height="33"/>
+        </designable>
+    </designables>
     <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
