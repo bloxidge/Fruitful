@@ -16,8 +16,4 @@ class GetFruitDataRequest: Request<FruitDataResponse> {
     override var path: String {
         return "data.json"
     }
-    
-    override var headers: [HttpHeader] {
-        return [.contentType(.json)]
-    }
 }
