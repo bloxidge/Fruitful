@@ -39,7 +39,8 @@ class FruitListPresenterImpl: FruitListPresenter {
                 } else {
                     self?.view.showPopulatedList()
                 }
-            }.catch { [weak self] _ in
+            }.catch { [weak self] error in
+                AnalyticsServiceImpl.shared.track(event: .error(error.localizedDescription))
                 self?.view.showError()
             }
         return promise.asVoid()
