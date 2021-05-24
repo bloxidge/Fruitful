@@ -33,6 +33,7 @@ class FruitDetailPresenterImpl: FruitDetailPresenter {
     }
     
     func didPressClose() {
+        AnalyticsServiceImpl.shared.track(screenEvent: .requested(.fruitList))
         router?.dismissDetail()
     }
 }

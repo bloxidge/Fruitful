@@ -28,6 +28,12 @@ class FruitListViewController: UIViewController {
         presenter.reload(showLoading: true)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsServiceImpl.shared.track(screenEvent: .displayed(.fruitList))
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
