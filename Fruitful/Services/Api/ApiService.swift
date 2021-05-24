@@ -23,7 +23,7 @@ class ApiServiceImpl: ApiService {
          urlSession: URLSession = .shared) {
         self.requestBuilder = requestBuilder
         self.urlSession = urlSession
-        self.analytics = AnalyticsServiceImpl(requestBuilder: requestBuilder)
+        self.analytics = AnalyticsServiceImpl.shared
     }
     
     func send<ResponseType>(request: Request<ResponseType>) -> Promise<ResponseType> where ResponseType : Decodable {

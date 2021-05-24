@@ -14,6 +14,10 @@ protocol AnalyticsService {
 
 class AnalyticsServiceImpl: AnalyticsService {
     
+    static var shared: AnalyticsService = {
+        return AnalyticsServiceImpl(requestBuilder: URLRequestBuilderImpl())
+    }()
+    
     let requestBuilder: URLRequestBuilder
     let urlSession: URLSession
     
