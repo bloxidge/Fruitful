@@ -10,6 +10,7 @@ import PromiseKit
 
 protocol AnalyticsService {
     func track(event: AnalyticsEvent)
+    func track(screenEvent: Screen.Event)
 }
 
 class AnalyticsServiceImpl: AnalyticsService {
@@ -21,6 +22,8 @@ class AnalyticsServiceImpl: AnalyticsService {
     let requestBuilder: URLRequestBuilder
     let urlSession: URLSession
     
+    private var pendingScreen: (name: Screen.Name, stamp: Date)?
+    
     init(requestBuilder: URLRequestBuilder,
          urlSession: URLSession = .shared) {
         self.requestBuilder = requestBuilder
@@ -29,6 +32,21 @@ class AnalyticsServiceImpl: AnalyticsService {
     
     func track(event: AnalyticsEvent) {
         send(request: PostAnalyticsEventRequest(event: event))
+    }
+    
+    func track(screenEvent: Screen.Event) {
+        switch screenEvent {
+        case .requested(let screenName):
+            pendingScreen = (screenName, Date())
+        case .displayed(let screenName):
+            if let pendingScreen = pendingScreen {
+                if pendingScreen.name == screenName {
+                    let executionTimeMs = Date().timeIntervalSince(pendingScreen.stamp).milliseconds
+                    AnalyticsServiceImpl.shared.track(event: .display(time: UInt(executionTimeMs)))
+                }
+            }
+            pendingScreen = nil
+        }
     }
     
     @discardableResult

@@ -47,6 +47,7 @@
 		FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */; };
 		FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */; };
 		FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC38265BCF4500159141 /* ApiConfig.swift */; };
+		FDB5CC3B265BF1A400159141 /* ScreenAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC3A265BF1A400159141 /* ScreenAnalytics.swift */; };
 		FDEACC2F2659C62600D0A756 /* FruitDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+refresh.swift"; sourceTree = "<group>"; };
 		FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Utils.swift"; sourceTree = "<group>"; };
 		FDB5CC38265BCF4500159141 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		FDB5CC3A265BF1A400159141 /* ScreenAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAnalytics.swift; sourceTree = "<group>"; };
 		FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +281,7 @@
 				FD06C7E1265D34E500D1B497 /* Request */,
 				FD06C7DD265D21F700D1B497 /* AnalyticsService.swift */,
 				FD06C7DF265D265F00D1B497 /* AnalyticsEvent.swift */,
+				FDB5CC3A265BF1A400159141 /* ScreenAnalytics.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				FD2E099426596B52006D3459 /* FruitListModule.swift in Sources */,
 				FD06C7E3265D350B00D1B497 /* PostAnalyticsEventRequest.swift in Sources */,
 				FD53C98A2659F3A60046D485 /* SceneDelegate.swift in Sources */,
+				FDB5CC3B265BF1A400159141 /* ScreenAnalytics.swift in Sources */,
 				FD53C98C2659F7970046D485 /* NibBackedView.swift in Sources */,
 				FD701595265BC60A00E72899 /* HttpMethod.swift in Sources */,
 				FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */,

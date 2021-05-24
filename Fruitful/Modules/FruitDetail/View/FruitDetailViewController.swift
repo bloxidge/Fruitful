@@ -21,6 +21,12 @@ class FruitDetailViewController: UIViewController {
         presenter.loadView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        AnalyticsServiceImpl.shared.track(screenEvent: .displayed(.fruitDetail))
+    }
+    
     @IBAction func closePressed() {
         presenter.didPressClose()
     }

@@ -55,6 +55,7 @@ class FruitListPresenterImpl: FruitListPresenter {
     }
     
     func didSelect(fruit: Fruit) {
+        AnalyticsServiceImpl.shared.track(screenEvent: .requested(.fruitDetail))
         router.presentDetail(for: fruit)
     }
 }
