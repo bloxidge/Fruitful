@@ -9,10 +9,6 @@ import Foundation
 
 class PostAnalyticsEventRequest: Request<EmptyResponse> {
     
-    override var method: HttpMethod {
-        return .post
-    }
-    
     override var path: String {
         return "stats"
     }
