@@ -45,6 +45,8 @@
 		FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */; };
 		FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */; };
 		FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */; };
+		FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */; };
+		FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC38265BCF4500159141 /* ApiConfig.swift */; };
 		FDEACC2F2659C62600D0A756 /* FruitDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitDataRequest.swift; sourceTree = "<group>"; };
 		FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
 		FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+refresh.swift"; sourceTree = "<group>"; };
+		FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Utils.swift"; sourceTree = "<group>"; };
+		FDB5CC38265BCF4500159141 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,6 +267,7 @@
 			children = (
 				FD701596265BC60A00E72899 /* Request */,
 				FD701590265BC54500E72899 /* ApiService.swift */,
+				FDB5CC38265BCF4500159141 /* ApiConfig.swift */,
 				FD70159C265BC60A00E72899 /* ApiError.swift */,
 			);
 			path = Api;
@@ -354,6 +359,7 @@
 			children = (
 				FD53C9622659E7E20046D485 /* UIViewController+storyboard.swift */,
 				FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */,
+				FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,10 +504,12 @@
 				FD2E098B265963F6006D3459 /* FruitDetailPresenter.swift in Sources */,
 				FD53C94E26593A010046D485 /* FruitListPresenter.swift in Sources */,
 				FD53C95F265967260046D485 /* FruitListView.swift in Sources */,
+				FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */,
 				FD53C9632659E7E20046D485 /* UIViewController+storyboard.swift in Sources */,
 				FD701593265BC60A00E72899 /* Request.swift in Sources */,
 				FD70159B265BC60A00E72899 /* URLRequestBuilder.swift in Sources */,
 				FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */,
+				FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */,
 				FD53C9592659582F0046D485 /* FruitListCollectionViewCell.swift in Sources */,
 				FD2E0990265963F6006D3459 /* FruitDetailRouter.swift in Sources */,
 				FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol AnalyticsService {
     func track(event: AnalyticsEvent)
@@ -13,14 +14,24 @@ protocol AnalyticsService {
 
 class AnalyticsServiceImpl: AnalyticsService {
     
-    let api: ApiService
+    let requestBuilder: URLRequestBuilder
+    let urlSession: URLSession
     
-    init(api: ApiService) {
-        self.api = api
+    init(requestBuilder: URLRequestBuilder,
+         urlSession: URLSession = .shared) {
+        self.requestBuilder = requestBuilder
+        self.urlSession = urlSession
     }
     
     func track(event: AnalyticsEvent) {
-        api.send(request: PostAnalyticsEventRequest(event: event))
-            .cauterize()
+        send(request: PostAnalyticsEventRequest(event: event))
+    }
+    
+    @discardableResult
+    func send(request: PostAnalyticsEventRequest) -> Promise<Void> {
+        firstly { () -> Promise<Void> in
+            let urlRequest = try requestBuilder.build(from: request, baseUrl: ApiConfig.baseUrl)
+            return urlSession.dataTask(.promise, with: urlRequest).asVoid()
+        }
     }
 }
