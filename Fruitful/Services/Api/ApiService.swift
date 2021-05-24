@@ -17,13 +17,11 @@ class ApiServiceImpl: ApiService {
     
     let requestBuilder: URLRequestBuilder
     let urlSession: URLSession
-    let analytics: AnalyticsService
     
     init(requestBuilder: URLRequestBuilder,
          urlSession: URLSession = .shared) {
         self.requestBuilder = requestBuilder
         self.urlSession = urlSession
-        self.analytics = AnalyticsServiceImpl.shared
     }
     
     func send<ResponseType>(request: Request<ResponseType>) -> Promise<ResponseType> where ResponseType : Decodable {
@@ -53,10 +51,10 @@ class ApiServiceImpl: ApiService {
         .map { data in
             try request.decode(response: data)
         }
-        .ensure { [weak self] in
+        .ensure {
             guard let start = start, let end = end else { return }
             let executionTimeMs = end.timeIntervalSince(start).milliseconds
-            self?.analytics.track(event: .load(time: UInt(executionTimeMs)))
+            AnalyticsServiceImpl.shared.track(event: .load(time: UInt(executionTimeMs)))
         }
     }
 }
