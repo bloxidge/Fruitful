@@ -54,9 +54,9 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
 
 
 
-    open func onViewDidLoad() {
-        addInvocation(.m_onViewDidLoad)
-		let perform = methodPerformValue(.m_onViewDidLoad) as? () -> Void
+    open func attachToView() {
+        addInvocation(.m_attachToView)
+		let perform = methodPerformValue(.m_attachToView) as? () -> Void
 		perform?()
     }
 
@@ -68,12 +68,12 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
 
 
     fileprivate enum MethodType {
-        case m_onViewDidLoad
+        case m_attachToView
         case m_didPressClose
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
-            case (.m_onViewDidLoad, .m_onViewDidLoad): return .match
+            case (.m_attachToView, .m_attachToView): return .match
 
             case (.m_didPressClose, .m_didPressClose): return .match
             default: return .none
@@ -82,13 +82,13 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
 
         func intValue() -> Int {
             switch self {
-            case .m_onViewDidLoad: return 0
+            case .m_attachToView: return 0
             case .m_didPressClose: return 0
             }
         }
         func assertionName() -> String {
             switch self {
-            case .m_onViewDidLoad: return ".onViewDidLoad()"
+            case .m_attachToView: return ".attachToView()"
             case .m_didPressClose: return ".didPressClose()"
             }
         }
@@ -108,7 +108,7 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func onViewDidLoad() -> Verify { return Verify(method: .m_onViewDidLoad)}
+        public static func attachToView() -> Verify { return Verify(method: .m_attachToView)}
         public static func didPressClose() -> Verify { return Verify(method: .m_didPressClose)}
     }
 
@@ -116,8 +116,8 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func onViewDidLoad(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_onViewDidLoad, performs: perform)
+        public static func attachToView(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_attachToView, performs: perform)
         }
         public static func didPressClose(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_didPressClose, performs: perform)
@@ -781,9 +781,9 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
 
 
-    open func onViewDidLoad() {
-        addInvocation(.m_onViewDidLoad)
-		let perform = methodPerformValue(.m_onViewDidLoad) as? () -> Void
+    open func attachToView() {
+        addInvocation(.m_attachToView)
+		let perform = methodPerformValue(.m_attachToView) as? () -> Void
 		perform?()
     }
 
@@ -836,7 +836,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
 
     fileprivate enum MethodType {
-        case m_onViewDidLoad
+        case m_attachToView
         case m_reload__showLoading_showLoading(Parameter<Bool>)
         case m_getFruitCount
         case m_getFruit__at_index(Parameter<Int>)
@@ -844,7 +844,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
-            case (.m_onViewDidLoad, .m_onViewDidLoad): return .match
+            case (.m_attachToView, .m_attachToView): return .match
 
             case (.m_reload__showLoading_showLoading(let lhsShowloading), .m_reload__showLoading_showLoading(let rhsShowloading)):
 				var results: [Matcher.ParameterComparisonResult] = []
@@ -868,7 +868,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
         func intValue() -> Int {
             switch self {
-            case .m_onViewDidLoad: return 0
+            case .m_attachToView: return 0
             case let .m_reload__showLoading_showLoading(p0): return p0.intValue
             case .m_getFruitCount: return 0
             case let .m_getFruit__at_index(p0): return p0.intValue
@@ -877,7 +877,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
         }
         func assertionName() -> String {
             switch self {
-            case .m_onViewDidLoad: return ".onViewDidLoad()"
+            case .m_attachToView: return ".attachToView()"
             case .m_reload__showLoading_showLoading: return ".reload(showLoading:)"
             case .m_getFruitCount: return ".getFruitCount()"
             case .m_getFruit__at_index: return ".getFruit(at:)"
@@ -932,7 +932,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func onViewDidLoad() -> Verify { return Verify(method: .m_onViewDidLoad)}
+        public static func attachToView() -> Verify { return Verify(method: .m_attachToView)}
         @discardableResult
 		public static func reload(showLoading: Parameter<Bool>) -> Verify { return Verify(method: .m_reload__showLoading_showLoading(`showLoading`))}
         public static func getFruitCount() -> Verify { return Verify(method: .m_getFruitCount)}
@@ -944,8 +944,8 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func onViewDidLoad(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_onViewDidLoad, performs: perform)
+        public static func attachToView(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_attachToView, performs: perform)
         }
         @discardableResult
 		public static func reload(showLoading: Parameter<Bool>, perform: @escaping (Bool) -> Void) -> Perform {

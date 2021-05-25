@@ -25,7 +25,7 @@ class FruitListViewController: UIViewController {
         
         setUpCollectionView()
         
-        presenter.onViewDidLoad()
+        presenter.attachToView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

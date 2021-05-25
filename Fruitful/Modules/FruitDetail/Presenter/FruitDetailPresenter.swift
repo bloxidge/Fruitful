@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FruitDetailPresenter: AutoMockable {
-    func onViewDidLoad()
+    func attachToView()
     func didPressClose()
 }
 
@@ -23,7 +23,7 @@ class FruitDetailPresenterImpl: FruitDetailPresenter {
         self.fruit = fruit
     }
     
-    func onViewDidLoad() {
+    func attachToView() {
         view.updateView(state: .initial(fruit))
     }
     

@@ -18,7 +18,7 @@ class FruitDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.onViewDidLoad()
+        presenter.attachToView()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 
 protocol FruitListPresenter: AutoMockable {
-    func onViewDidLoad()
+    func attachToView()
     @discardableResult
     func reload(showLoading: Bool) -> Promise<Void>
     func getFruitCount() -> Int?
@@ -23,7 +23,7 @@ class FruitListPresenterImpl: FruitListPresenter {
     var interactor: FruitListInteractor!
     var router: FruitListRouter!
     
-    func onViewDidLoad() {
+    func attachToView() {
         view.updateView(state: .initial)
     }
     
