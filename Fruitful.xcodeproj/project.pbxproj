@@ -406,6 +406,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD53C92E2659193F0046D485 /* Build configuration list for PBXNativeTarget "Fruitful" */;
 			buildPhases = (
+				FD931C5A265D0E1A00F37AB3 /* Generate Mocks */,
 				FD53C9002659193C0046D485 /* Sources */,
 				FD53C9012659193C0046D485 /* Frameworks */,
 				FD53C9022659193C0046D485 /* Resources */,
@@ -510,6 +511,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		FD931C5A265D0E1A00F37AB3 /* Generate Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mocks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/xcrun --sdk macosx bash";
+			shellScript = "scripts/generate-mocks\n";
+		};
 		FDB5CC3F265C25FC00159141 /* Generate Mocks */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
