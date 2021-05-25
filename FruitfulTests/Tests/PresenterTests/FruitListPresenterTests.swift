@@ -55,7 +55,7 @@ class FruitListPresenterTests: XCTestCase {
         sut.reload(showLoading: false)
 
         // Then
-        //   View should NOT get a `.loading` state update callback
+        //   View should not get a `.loading` state update callback
         Verify(view, 0, .updateView(state: .value(.loading)))
     }
     

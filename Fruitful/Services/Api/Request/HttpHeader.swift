@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HttpHeader {
+enum HttpHeader: Equatable {
     case contentType(ContentType)
     
     func getHeader() -> (key: String, value: String) {

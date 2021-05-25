@@ -46,6 +46,8 @@
 		FD931C62265D291C00F37AB3 /* FruitFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C61265D291C00F37AB3 /* FruitFixtures.swift */; };
 		FD931C64265D29B800F37AB3 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C951265953690046D485 /* Fruit.swift */; };
 		FD931C66265D325000F37AB3 /* FruitDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C65265D325000F37AB3 /* FruitDetailPresenterTests.swift */; };
+		FD931C69265D3E6C00F37AB3 /* FruitListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C68265D3E6C00F37AB3 /* FruitListInteractorTests.swift */; };
+		FD931C6B265D4D1400F37AB3 /* RequestMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C6A265D4D1400F37AB3 /* RequestMatcher.swift */; };
 		FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */; };
 		FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */; };
 		FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC38265BCF4500159141 /* ApiConfig.swift */; };
@@ -108,6 +110,8 @@
 		FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestExpectation+Promise.swift"; sourceTree = "<group>"; };
 		FD931C61265D291C00F37AB3 /* FruitFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitFixtures.swift; sourceTree = "<group>"; };
 		FD931C65265D325000F37AB3 /* FruitDetailPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailPresenterTests.swift; sourceTree = "<group>"; };
+		FD931C68265D3E6C00F37AB3 /* FruitListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FruitListInteractorTests.swift; path = FruitfulTests/Tests/InteractorTests/FruitListInteractorTests.swift; sourceTree = SOURCE_ROOT; };
+		FD931C6A265D4D1400F37AB3 /* RequestMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMatcher.swift; sourceTree = "<group>"; };
 		FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+refresh.swift"; sourceTree = "<group>"; };
 		FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Utils.swift"; sourceTree = "<group>"; };
 		FDB5CC38265BCF4500159141 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 		FD931C59265D00FF00F37AB3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FD931C67265D3CFA00F37AB3 /* InteractorTests */,
 				FD931C5B265D19AC00F37AB3 /* PresenterTests */,
 			);
 			path = Tests;
@@ -420,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */,
+				FD931C6A265D4D1400F37AB3 /* RequestMatcher.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -430,6 +436,14 @@
 				FD931C61265D291C00F37AB3 /* FruitFixtures.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		FD931C67265D3CFA00F37AB3 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD931C68265D3E6C00F37AB3 /* FruitListInteractorTests.swift */,
+			);
+			path = InteractorTests;
 			sourceTree = "<group>";
 		};
 		FDB5CC43265C43A400159141 /* Mocks */ = {
@@ -640,9 +654,11 @@
 			files = (
 				FD931C5E265D24F200F37AB3 /* XCTestExpectation+Promise.swift in Sources */,
 				FD931C66265D325000F37AB3 /* FruitDetailPresenterTests.swift in Sources */,
+				FD931C6B265D4D1400F37AB3 /* RequestMatcher.swift in Sources */,
 				FDB5CC45265C43A400159141 /* Mock.generated.swift in Sources */,
 				FD931C62265D291C00F37AB3 /* FruitFixtures.swift in Sources */,
 				FD53C91F2659193F0046D485 /* FruitListPresenterTests.swift in Sources */,
+				FD931C69265D3E6C00F37AB3 /* FruitListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

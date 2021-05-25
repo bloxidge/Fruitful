@@ -10,6 +10,8 @@ import Foundation
 
 struct FruitFixtures {
     
+    static let response = FruitDataResponse(fruit: fruitResults)
+    
     static let fruitResults = [
         Fruit(type: "apple", price: 149, weight: 120),
         Fruit(type: "banana", price: 129, weight: 80),
