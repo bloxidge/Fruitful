@@ -7,20 +7,15 @@
 
 import Foundation
 
-protocol FruitDetailPresenter: AnyObject {
-    var view: FruitDetailView? { get }
-    var interactor: FruitDetailInteractor? { get }
-    var router: FruitDetailRouter? { get }
-    
-    func loadView()
+protocol FruitDetailPresenter: AutoMockable {
+    func attachToView()
     func didPressClose()
 }
 
 class FruitDetailPresenterImpl: FruitDetailPresenter {
     
-    var view: FruitDetailView?
-    var interactor: FruitDetailInteractor?
-    var router: FruitDetailRouter?
+    var view: FruitDetailView!
+    var router: FruitDetailRouter!
     
     let fruit: Fruit
     
@@ -28,12 +23,12 @@ class FruitDetailPresenterImpl: FruitDetailPresenter {
         self.fruit = fruit
     }
     
-    func loadView() {
-        view?.showDetails(for: fruit)
+    func attachToView() {
+        view.updateView(state: .initial(fruit))
     }
     
     func didPressClose() {
         AnalyticsServiceImpl.shared.track(screenEvent: .requested(.fruitList))
-        router?.dismissDetail()
+        router.dismissDetail()
     }
 }

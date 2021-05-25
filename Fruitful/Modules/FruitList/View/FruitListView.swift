@@ -7,9 +7,14 @@
 
 import Foundation
 
-protocol FruitListView {
-    func showLoading()
-    func showPopulatedList()
-    func showEmptyList()
-    func showError()
+enum FruitListViewState: Equatable {
+    case initial
+    case loading
+    case doneResults
+    case doneEmpty
+    case error
+}
+
+protocol FruitListView: AutoMockable {
+    func updateView(state: FruitListViewState)
 }

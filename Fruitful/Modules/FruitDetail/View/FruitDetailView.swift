@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol FruitDetailView {
-    func showDetails(for fruit: Fruit)
+enum FruitDetailViewState: Equatable {
+    case initial(Fruit)
+}
+
+protocol FruitDetailView: AutoMockable {
+    func updateView(state: FruitDetailViewState)
 }

@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-protocol FruitListInteractor: AnyObject {
+protocol FruitListInteractor: AutoMockable {
     var allFruit: [Fruit]? { get }
     
     func fetchAllFruit() -> Promise<[Fruit]>

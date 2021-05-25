@@ -18,7 +18,7 @@ class FruitDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.loadView()
+        presenter.attachToView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,9 +34,11 @@ class FruitDetailViewController: UIViewController {
 
 extension FruitDetailViewController: FruitDetailView {
     
-    func showDetails(for fruit: Fruit) {
-        titleLabel.text = fruit.type.capitalized
-        priceLabel.text = String(format: "£ %0.2f", fruit.priceInPoundsAndPence)
-        weightLabel.text = String(format: "%0.3f kg", fruit.weightInKg)
+    func updateView(state: FruitDetailViewState) {
+        if case .initial(let fruit) = state {
+            titleLabel.text = fruit.type.capitalized
+            priceLabel.text = String(format: "£ %0.2f", fruit.priceInPoundsAndPence)
+            weightLabel.text = String(format: "%0.3f kg", fruit.weightInKg)
+        }
     }
 }

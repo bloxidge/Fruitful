@@ -8,11 +8,8 @@
 import Foundation
 import PromiseKit
 
-protocol FruitListPresenter: AnyObject {
-    var view: FruitListView! { get set }
-    var interactor: FruitListInteractor! { get set }
-    var router: FruitListRouter! { get set }
-    
+protocol FruitListPresenter: AutoMockable {
+    func attachToView()
     @discardableResult
     func reload(showLoading: Bool) -> Promise<Void>
     func getFruitCount() -> Int?
@@ -26,23 +23,27 @@ class FruitListPresenterImpl: FruitListPresenter {
     var interactor: FruitListInteractor!
     var router: FruitListRouter!
     
+    func attachToView() {
+        view.updateView(state: .initial)
+    }
+    
     @discardableResult
     func reload(showLoading: Bool) -> Promise<Void> {
         if showLoading {
-            view.showLoading()
+            view.updateView(state: .loading)
         }
         
         let promise = interactor.fetchAllFruit()
         promise.done { [weak self] fruit in
-                if fruit.isEmpty {
-                    self?.view.showEmptyList()
-                } else {
-                    self?.view.showPopulatedList()
-                }
-            }.catch { [weak self] error in
-                AnalyticsServiceImpl.shared.track(event: .error(error.localizedDescription))
-                self?.view.showError()
+            if fruit.isEmpty {
+                self?.view.updateView(state: .doneEmpty)
+            } else {
+                self?.view.updateView(state: .doneResults)
             }
+        }.catch { [weak self] error in
+            AnalyticsServiceImpl.shared.track(event: .error(error.localizedDescription))
+            self?.view.updateView(state: .error)
+        }
         return promise.asVoid()
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FruitDetailRouter: AnyObject {
+protocol FruitDetailRouter: AutoMockable {
     func dismissDetail()
 }
 

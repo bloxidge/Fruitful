@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FruitListRouter: AnyObject {
+protocol FruitListRouter: AutoMockable {
     func presentDetail(for fruit: Fruit)
 }
 
