@@ -54,9 +54,9 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
 
 
 
-    open func loadView() {
-        addInvocation(.m_loadView)
-		let perform = methodPerformValue(.m_loadView) as? () -> Void
+    open func onViewDidLoad() {
+        addInvocation(.m_onViewDidLoad)
+		let perform = methodPerformValue(.m_onViewDidLoad) as? () -> Void
 		perform?()
     }
 
@@ -68,12 +68,12 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
 
 
     fileprivate enum MethodType {
-        case m_loadView
+        case m_onViewDidLoad
         case m_didPressClose
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
-            case (.m_loadView, .m_loadView): return .match
+            case (.m_onViewDidLoad, .m_onViewDidLoad): return .match
 
             case (.m_didPressClose, .m_didPressClose): return .match
             default: return .none
@@ -82,13 +82,13 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
 
         func intValue() -> Int {
             switch self {
-            case .m_loadView: return 0
+            case .m_onViewDidLoad: return 0
             case .m_didPressClose: return 0
             }
         }
         func assertionName() -> String {
             switch self {
-            case .m_loadView: return ".loadView()"
+            case .m_onViewDidLoad: return ".onViewDidLoad()"
             case .m_didPressClose: return ".didPressClose()"
             }
         }
@@ -108,7 +108,7 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func loadView() -> Verify { return Verify(method: .m_loadView)}
+        public static func onViewDidLoad() -> Verify { return Verify(method: .m_onViewDidLoad)}
         public static func didPressClose() -> Verify { return Verify(method: .m_didPressClose)}
     }
 
@@ -116,8 +116,8 @@ open class FruitDetailPresenterMock: FruitDetailPresenter, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func loadView(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_loadView, performs: perform)
+        public static func onViewDidLoad(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_onViewDidLoad, performs: perform)
         }
         public static func didPressClose(perform: @escaping () -> Void) -> Perform {
             return Perform(method: .m_didPressClose, performs: perform)
@@ -408,33 +408,33 @@ open class FruitDetailViewMock: FruitDetailView, Mock {
 
 
 
-    open func showDetails(for fruit: Fruit) {
-        addInvocation(.m_showDetails__for_fruit(Parameter<Fruit>.value(`fruit`)))
-		let perform = methodPerformValue(.m_showDetails__for_fruit(Parameter<Fruit>.value(`fruit`))) as? (Fruit) -> Void
-		perform?(`fruit`)
+    open func updateView(state: FruitDetailViewState) {
+        addInvocation(.m_updateView__state_state(Parameter<FruitDetailViewState>.value(`state`)))
+		let perform = methodPerformValue(.m_updateView__state_state(Parameter<FruitDetailViewState>.value(`state`))) as? (FruitDetailViewState) -> Void
+		perform?(`state`)
     }
 
 
     fileprivate enum MethodType {
-        case m_showDetails__for_fruit(Parameter<Fruit>)
+        case m_updateView__state_state(Parameter<FruitDetailViewState>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
-            case (.m_showDetails__for_fruit(let lhsFruit), .m_showDetails__for_fruit(let rhsFruit)):
+            case (.m_updateView__state_state(let lhsState), .m_updateView__state_state(let rhsState)):
 				var results: [Matcher.ParameterComparisonResult] = []
-				results.append(Matcher.ParameterComparisonResult(Parameter.compare(lhs: lhsFruit, rhs: rhsFruit, with: matcher), lhsFruit, rhsFruit, "for fruit"))
+				results.append(Matcher.ParameterComparisonResult(Parameter.compare(lhs: lhsState, rhs: rhsState, with: matcher), lhsState, rhsState, "state"))
 				return Matcher.ComparisonResult(results)
             }
         }
 
         func intValue() -> Int {
             switch self {
-            case let .m_showDetails__for_fruit(p0): return p0.intValue
+            case let .m_updateView__state_state(p0): return p0.intValue
             }
         }
         func assertionName() -> String {
             switch self {
-            case .m_showDetails__for_fruit: return ".showDetails(for:)"
+            case .m_updateView__state_state: return ".updateView(state:)"
             }
         }
     }
@@ -453,15 +453,15 @@ open class FruitDetailViewMock: FruitDetailView, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func showDetails(for fruit: Parameter<Fruit>) -> Verify { return Verify(method: .m_showDetails__for_fruit(`fruit`))}
+        public static func updateView(state: Parameter<FruitDetailViewState>) -> Verify { return Verify(method: .m_updateView__state_state(`state`))}
     }
 
     public struct Perform {
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func showDetails(for fruit: Parameter<Fruit>, perform: @escaping (Fruit) -> Void) -> Perform {
-            return Perform(method: .m_showDetails__for_fruit(`fruit`), performs: perform)
+        public static func updateView(state: Parameter<FruitDetailViewState>, perform: @escaping (FruitDetailViewState) -> Void) -> Perform {
+            return Perform(method: .m_updateView__state_state(`state`), performs: perform)
         }
     }
 
@@ -781,6 +781,12 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
 
 
+    open func onViewDidLoad() {
+        addInvocation(.m_onViewDidLoad)
+		let perform = methodPerformValue(.m_onViewDidLoad) as? () -> Void
+		perform?()
+    }
+
     @discardableResult
 	open func reload(showLoading: Bool) -> Promise<Void> {
         addInvocation(.m_reload__showLoading_showLoading(Parameter<Bool>.value(`showLoading`)))
@@ -830,6 +836,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
 
     fileprivate enum MethodType {
+        case m_onViewDidLoad
         case m_reload__showLoading_showLoading(Parameter<Bool>)
         case m_getFruitCount
         case m_getFruit__at_index(Parameter<Int>)
@@ -837,6 +844,8 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
+            case (.m_onViewDidLoad, .m_onViewDidLoad): return .match
+
             case (.m_reload__showLoading_showLoading(let lhsShowloading), .m_reload__showLoading_showLoading(let rhsShowloading)):
 				var results: [Matcher.ParameterComparisonResult] = []
 				results.append(Matcher.ParameterComparisonResult(Parameter.compare(lhs: lhsShowloading, rhs: rhsShowloading, with: matcher), lhsShowloading, rhsShowloading, "showLoading"))
@@ -859,6 +868,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
 
         func intValue() -> Int {
             switch self {
+            case .m_onViewDidLoad: return 0
             case let .m_reload__showLoading_showLoading(p0): return p0.intValue
             case .m_getFruitCount: return 0
             case let .m_getFruit__at_index(p0): return p0.intValue
@@ -867,6 +877,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
         }
         func assertionName() -> String {
             switch self {
+            case .m_onViewDidLoad: return ".onViewDidLoad()"
             case .m_reload__showLoading_showLoading: return ".reload(showLoading:)"
             case .m_getFruitCount: return ".getFruitCount()"
             case .m_getFruit__at_index: return ".getFruit(at:)"
@@ -921,6 +932,7 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
+        public static func onViewDidLoad() -> Verify { return Verify(method: .m_onViewDidLoad)}
         @discardableResult
 		public static func reload(showLoading: Parameter<Bool>) -> Verify { return Verify(method: .m_reload__showLoading_showLoading(`showLoading`))}
         public static func getFruitCount() -> Verify { return Verify(method: .m_getFruitCount)}
@@ -932,6 +944,9 @@ open class FruitListPresenterMock: FruitListPresenter, Mock {
         fileprivate var method: MethodType
         var performs: Any
 
+        public static func onViewDidLoad(perform: @escaping () -> Void) -> Perform {
+            return Perform(method: .m_onViewDidLoad, performs: perform)
+        }
         @discardableResult
 		public static func reload(showLoading: Parameter<Bool>, perform: @escaping (Bool) -> Void) -> Perform {
             return Perform(method: .m_reload__showLoading_showLoading(`showLoading`), performs: perform)
@@ -1234,64 +1249,33 @@ open class FruitListViewMock: FruitListView, Mock {
 
 
 
-    open func showLoading() {
-        addInvocation(.m_showLoading)
-		let perform = methodPerformValue(.m_showLoading) as? () -> Void
-		perform?()
-    }
-
-    open func showPopulatedList() {
-        addInvocation(.m_showPopulatedList)
-		let perform = methodPerformValue(.m_showPopulatedList) as? () -> Void
-		perform?()
-    }
-
-    open func showEmptyList() {
-        addInvocation(.m_showEmptyList)
-		let perform = methodPerformValue(.m_showEmptyList) as? () -> Void
-		perform?()
-    }
-
-    open func showError() {
-        addInvocation(.m_showError)
-		let perform = methodPerformValue(.m_showError) as? () -> Void
-		perform?()
+    open func updateView(state: FruitListViewState) {
+        addInvocation(.m_updateView__state_state(Parameter<FruitListViewState>.value(`state`)))
+		let perform = methodPerformValue(.m_updateView__state_state(Parameter<FruitListViewState>.value(`state`))) as? (FruitListViewState) -> Void
+		perform?(`state`)
     }
 
 
     fileprivate enum MethodType {
-        case m_showLoading
-        case m_showPopulatedList
-        case m_showEmptyList
-        case m_showError
+        case m_updateView__state_state(Parameter<FruitListViewState>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Matcher.ComparisonResult {
             switch (lhs, rhs) {
-            case (.m_showLoading, .m_showLoading): return .match
-
-            case (.m_showPopulatedList, .m_showPopulatedList): return .match
-
-            case (.m_showEmptyList, .m_showEmptyList): return .match
-
-            case (.m_showError, .m_showError): return .match
-            default: return .none
+            case (.m_updateView__state_state(let lhsState), .m_updateView__state_state(let rhsState)):
+				var results: [Matcher.ParameterComparisonResult] = []
+				results.append(Matcher.ParameterComparisonResult(Parameter.compare(lhs: lhsState, rhs: rhsState, with: matcher), lhsState, rhsState, "state"))
+				return Matcher.ComparisonResult(results)
             }
         }
 
         func intValue() -> Int {
             switch self {
-            case .m_showLoading: return 0
-            case .m_showPopulatedList: return 0
-            case .m_showEmptyList: return 0
-            case .m_showError: return 0
+            case let .m_updateView__state_state(p0): return p0.intValue
             }
         }
         func assertionName() -> String {
             switch self {
-            case .m_showLoading: return ".showLoading()"
-            case .m_showPopulatedList: return ".showPopulatedList()"
-            case .m_showEmptyList: return ".showEmptyList()"
-            case .m_showError: return ".showError()"
+            case .m_updateView__state_state: return ".updateView(state:)"
             }
         }
     }
@@ -1310,27 +1294,15 @@ open class FruitListViewMock: FruitListView, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func showLoading() -> Verify { return Verify(method: .m_showLoading)}
-        public static func showPopulatedList() -> Verify { return Verify(method: .m_showPopulatedList)}
-        public static func showEmptyList() -> Verify { return Verify(method: .m_showEmptyList)}
-        public static func showError() -> Verify { return Verify(method: .m_showError)}
+        public static func updateView(state: Parameter<FruitListViewState>) -> Verify { return Verify(method: .m_updateView__state_state(`state`))}
     }
 
     public struct Perform {
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func showLoading(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_showLoading, performs: perform)
-        }
-        public static func showPopulatedList(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_showPopulatedList, performs: perform)
-        }
-        public static func showEmptyList(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_showEmptyList, performs: perform)
-        }
-        public static func showError(perform: @escaping () -> Void) -> Perform {
-            return Perform(method: .m_showError, performs: perform)
+        public static func updateView(state: Parameter<FruitListViewState>, perform: @escaping (FruitListViewState) -> Void) -> Perform {
+            return Perform(method: .m_updateView__state_state(`state`), performs: perform)
         }
     }
 

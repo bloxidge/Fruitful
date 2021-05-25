@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum FruitDetailViewState {
+    case initial(Fruit)
+}
+
 protocol FruitDetailView: AutoMockable {
-    func showDetails(for fruit: Fruit)
+    func updateView(state: FruitDetailViewState)
 }

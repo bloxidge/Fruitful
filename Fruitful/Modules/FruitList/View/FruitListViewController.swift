@@ -25,6 +25,12 @@ class FruitListViewController: UIViewController {
         
         setUpCollectionView()
         
+        presenter.onViewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         presenter.reload(showLoading: true)
     }
     
@@ -76,30 +82,35 @@ class FruitListViewController: UIViewController {
 
 extension FruitListViewController: FruitListView {
     
-    func showLoading() {
-        activityIndicator.startAnimating()
-        collectionView.isHidden = true
-        noResultsContainer.isHidden = true
-    }
-    
-    func showPopulatedList() {
-        activityIndicator.stopAnimating()
-        collectionView.reloadData()
-        collectionView.isHidden = false
-        noResultsContainer.isHidden = true
-    }
-    
-    func showEmptyList() {
-        activityIndicator.stopAnimating()
-        collectionView.reloadData()
-        collectionView.isHidden = true
-        noResultsContainer.isHidden = false
-    }
-    
-    func showError() {
-        activityIndicator.stopAnimating()
-        collectionView.isHidden = true
-        presentErrorAlert(message: "Oops, something went wrong. Please try again.")
+    func updateView(state: FruitListViewState) {
+        switch state {
+        case .initial:
+            activityIndicator.stopAnimating()
+            collectionView.isHidden = true
+            noResultsContainer.isHidden = true
+            
+        case .loading:
+            activityIndicator.startAnimating()
+            collectionView.isHidden = true
+            noResultsContainer.isHidden = true
+            
+        case .doneResults:
+            activityIndicator.stopAnimating()
+            collectionView.reloadData()
+            collectionView.isHidden = false
+            noResultsContainer.isHidden = true
+            
+        case .doneEmpty:
+            activityIndicator.stopAnimating()
+            collectionView.reloadData()
+            collectionView.isHidden = true
+            noResultsContainer.isHidden = false
+            
+        case .error:
+            activityIndicator.stopAnimating()
+            collectionView.isHidden = true
+            presentErrorAlert(message: "Oops, something went wrong. Please try again.")
+        }
     }
 }
 
