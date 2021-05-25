@@ -20,12 +20,11 @@
 		FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C90B2659193C0046D485 /* FruitListViewController.swift */; };
 		FD53C9112659193F0046D485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9102659193F0046D485 /* Assets.xcassets */; };
 		FD53C9142659193F0046D485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9122659193F0046D485 /* LaunchScreen.storyboard */; };
-		FD53C91F2659193F0046D485 /* FruitfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C91E2659193F0046D485 /* FruitfulTests.swift */; };
+		FD53C91F2659193F0046D485 /* FruitListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C91E2659193F0046D485 /* FruitListPresenterTests.swift */; };
 		FD53C945265935330046D485 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD53C944265935330046D485 /* PromiseKit */; };
 		FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C94B265939D50046D485 /* FruitListInteractor.swift */; };
 		FD53C94E26593A010046D485 /* FruitListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C94D26593A010046D485 /* FruitListPresenter.swift */; };
 		FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C94F26593ADC0046D485 /* FruitListRouter.swift */; };
-		FD53C952265953690046D485 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C951265953690046D485 /* Fruit.swift */; };
 		FD53C9592659582F0046D485 /* FruitListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C9572659582F0046D485 /* FruitListCollectionViewCell.swift */; };
 		FD53C95A2659582F0046D485 /* FruitListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD53C9582659582F0046D485 /* FruitListCollectionViewCell.xib */; };
 		FD53C95D265959780046D485 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C95C265959780046D485 /* DesignableView.swift */; };
@@ -43,6 +42,10 @@
 		FD7015A2265BC60A00E72899 /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD7015A1265BC60A00E72899 /* PMKFoundation */; };
 		FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */; };
 		FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */; };
+		FD931C5E265D24F200F37AB3 /* XCTestExpectation+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */; };
+		FD931C62265D291C00F37AB3 /* FruitFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C61265D291C00F37AB3 /* FruitFixtures.swift */; };
+		FD931C64265D29B800F37AB3 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C951265953690046D485 /* Fruit.swift */; };
+		FD931C66265D325000F37AB3 /* FruitDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C65265D325000F37AB3 /* FruitDetailPresenterTests.swift */; };
 		FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */; };
 		FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */; };
 		FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC38265BCF4500159141 /* ApiConfig.swift */; };
@@ -80,7 +83,7 @@
 		FD53C9132659193F0046D485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD53C9152659193F0046D485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD53C91A2659193F0046D485 /* FruitfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitfulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD53C91E2659193F0046D485 /* FruitfulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitfulTests.swift; sourceTree = "<group>"; };
+		FD53C91E2659193F0046D485 /* FruitListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListPresenterTests.swift; sourceTree = "<group>"; };
 		FD53C9202659193F0046D485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD53C94B265939D50046D485 /* FruitListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListInteractor.swift; sourceTree = "<group>"; };
 		FD53C94D26593A010046D485 /* FruitListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListPresenter.swift; sourceTree = "<group>"; };
@@ -102,6 +105,9 @@
 		FD70159C265BC60A00E72899 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitDataRequest.swift; sourceTree = "<group>"; };
 		FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestExpectation+Promise.swift"; sourceTree = "<group>"; };
+		FD931C61265D291C00F37AB3 /* FruitFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitFixtures.swift; sourceTree = "<group>"; };
+		FD931C65265D325000F37AB3 /* FruitDetailPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailPresenterTests.swift; sourceTree = "<group>"; };
 		FDA36746265A977400E7ED99 /* UIScrollView+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+refresh.swift"; sourceTree = "<group>"; };
 		FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Utils.swift"; sourceTree = "<group>"; };
 		FDB5CC38265BCF4500159141 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
@@ -210,8 +216,10 @@
 		FD53C91D2659193F0046D485 /* FruitfulTests */ = {
 			isa = PBXGroup;
 			children = (
-				FD53C91E2659193F0046D485 /* FruitfulTests.swift */,
+				FD931C59265D00FF00F37AB3 /* Tests */,
+				FD931C5F265D28DE00F37AB3 /* Fixtures */,
 				FDB5CC43265C43A400159141 /* Mocks */,
+				FD931C5C265D24AC00F37AB3 /* Utilities */,
 				FD53C94226592D250046D485 /* Supporting Files */,
 			);
 			path = FruitfulTests;
@@ -391,6 +399,39 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FD931C59265D00FF00F37AB3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FD931C5B265D19AC00F37AB3 /* PresenterTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FD931C5B265D19AC00F37AB3 /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD53C91E2659193F0046D485 /* FruitListPresenterTests.swift */,
+				FD931C65265D325000F37AB3 /* FruitDetailPresenterTests.swift */,
+			);
+			path = PresenterTests;
+			sourceTree = "<group>";
+		};
+		FD931C5C265D24AC00F37AB3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FD931C5F265D28DE00F37AB3 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				FD931C61265D291C00F37AB3 /* FruitFixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		FDB5CC43265C43A400159141 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +603,7 @@
 				FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */,
 				FD53C9632659E7E20046D485 /* UIViewController+storyboard.swift in Sources */,
 				FD701593265BC60A00E72899 /* Request.swift in Sources */,
+				FD931C64265D29B800F37AB3 /* Fruit.swift in Sources */,
 				FD70159B265BC60A00E72899 /* URLRequestBuilder.swift in Sources */,
 				FD53C94C265939D50046D485 /* FruitListInteractor.swift in Sources */,
 				FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */,
@@ -572,7 +614,6 @@
 				FDA36747265A977400E7ED99 /* UIScrollView+refresh.swift in Sources */,
 				FD53C95026593ADC0046D485 /* FruitListRouter.swift in Sources */,
 				FD2E09922659692B006D3459 /* FruitDetailModule.swift in Sources */,
-				FD53C952265953690046D485 /* Fruit.swift in Sources */,
 				FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */,
 				FD2E099426596B52006D3459 /* FruitListModule.swift in Sources */,
 				FD06C7E3265D350B00D1B497 /* PostAnalyticsEventRequest.swift in Sources */,
@@ -597,8 +638,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD931C5E265D24F200F37AB3 /* XCTestExpectation+Promise.swift in Sources */,
+				FD931C66265D325000F37AB3 /* FruitDetailPresenterTests.swift in Sources */,
 				FDB5CC45265C43A400159141 /* Mock.generated.swift in Sources */,
-				FD53C91F2659193F0046D485 /* FruitfulTests.swift in Sources */,
+				FD931C62265D291C00F37AB3 /* FruitFixtures.swift in Sources */,
+				FD53C91F2659193F0046D485 /* FruitListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
