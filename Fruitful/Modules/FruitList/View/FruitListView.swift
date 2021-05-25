@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FruitListView {
+protocol FruitListView: AutoMockable {
     func showLoading()
     func showPopulatedList()
     func showEmptyList()

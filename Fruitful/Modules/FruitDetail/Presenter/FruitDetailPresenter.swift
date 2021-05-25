@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FruitDetailPresenter: AnyObject {
+protocol FruitDetailPresenter: AutoMockable {
     func loadView()
     func didPressClose()
 }

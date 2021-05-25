@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-protocol FruitListPresenter: AnyObject {
+protocol FruitListPresenter: AutoMockable {
     @discardableResult
     func reload(showLoading: Bool) -> Promise<Void>
     func getFruitCount() -> Int?

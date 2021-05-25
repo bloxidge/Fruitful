@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol FruitDetailView {
+protocol FruitDetailView: AutoMockable {
     func showDetails(for fruit: Fruit)
 }
