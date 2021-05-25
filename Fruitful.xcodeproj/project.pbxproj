@@ -13,7 +13,6 @@
 		FD2E098B265963F6006D3459 /* FruitDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E0982265963F6006D3459 /* FruitDetailPresenter.swift */; };
 		FD2E098C265963F6006D3459 /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E0984265963F6006D3459 /* FruitDetailView.swift */; };
 		FD2E098D265963F6006D3459 /* FruitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E0985265963F6006D3459 /* FruitDetailViewController.swift */; };
-		FD2E098F265963F6006D3459 /* FruitDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E0988265963F6006D3459 /* FruitDetailInteractor.swift */; };
 		FD2E0990265963F6006D3459 /* FruitDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E098A265963F6006D3459 /* FruitDetailRouter.swift */; };
 		FD2E09922659692B006D3459 /* FruitDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E09912659692B006D3459 /* FruitDetailModule.swift */; };
 		FD2E099426596B52006D3459 /* FruitListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2E099326596B52006D3459 /* FruitListModule.swift */; };
@@ -71,7 +70,6 @@
 		FD2E0982265963F6006D3459 /* FruitDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailPresenter.swift; sourceTree = "<group>"; };
 		FD2E0984265963F6006D3459 /* FruitDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
 		FD2E0985265963F6006D3459 /* FruitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailViewController.swift; sourceTree = "<group>"; };
-		FD2E0988265963F6006D3459 /* FruitDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailInteractor.swift; sourceTree = "<group>"; };
 		FD2E098A265963F6006D3459 /* FruitDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailRouter.swift; sourceTree = "<group>"; };
 		FD2E09912659692B006D3459 /* FruitDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailModule.swift; sourceTree = "<group>"; };
 		FD2E099326596B52006D3459 /* FruitListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListModule.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			children = (
 				FD2E09912659692B006D3459 /* FruitDetailModule.swift */,
 				FD2E0983265963F6006D3459 /* View */,
-				FD2E0987265963F6006D3459 /* Interactor */,
 				FD2E0981265963F6006D3459 /* Presenter */,
 				FD2E0989265963F6006D3459 /* Router */,
 			);
@@ -170,14 +167,6 @@
 				FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FD2E0987265963F6006D3459 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				FD2E0988265963F6006D3459 /* FruitDetailInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		FD2E0989265963F6006D3459 /* Router */ = {
@@ -575,7 +564,6 @@
 				FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */,
 				FD53C9082659193C0046D485 /* AppDelegate.swift in Sources */,
 				FD53C95D265959780046D485 /* DesignableView.swift in Sources */,
-				FD2E098F265963F6006D3459 /* FruitDetailInteractor.swift in Sources */,
 				FD06C7DE265D21F700D1B497 /* AnalyticsService.swift in Sources */,
 				FD701598265BC60A00E72899 /* HttpHeader.swift in Sources */,
 				FD701591265BC54500E72899 /* ApiService.swift in Sources */,

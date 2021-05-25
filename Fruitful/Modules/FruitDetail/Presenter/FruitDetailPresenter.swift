@@ -8,19 +8,14 @@
 import Foundation
 
 protocol FruitDetailPresenter: AnyObject {
-    var view: FruitDetailView? { get }
-    var interactor: FruitDetailInteractor? { get }
-    var router: FruitDetailRouter? { get }
-    
     func loadView()
     func didPressClose()
 }
 
 class FruitDetailPresenterImpl: FruitDetailPresenter {
     
-    var view: FruitDetailView?
-    var interactor: FruitDetailInteractor?
-    var router: FruitDetailRouter?
+    var view: FruitDetailView!
+    var router: FruitDetailRouter!
     
     let fruit: Fruit
     
@@ -29,11 +24,11 @@ class FruitDetailPresenterImpl: FruitDetailPresenter {
     }
     
     func loadView() {
-        view?.showDetails(for: fruit)
+        view.showDetails(for: fruit)
     }
     
     func didPressClose() {
         AnalyticsServiceImpl.shared.track(screenEvent: .requested(.fruitList))
-        router?.dismissDetail()
+        router.dismissDetail()
     }
 }

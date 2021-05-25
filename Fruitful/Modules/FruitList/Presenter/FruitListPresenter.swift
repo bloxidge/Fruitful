@@ -9,10 +9,6 @@ import Foundation
 import PromiseKit
 
 protocol FruitListPresenter: AnyObject {
-    var view: FruitListView! { get set }
-    var interactor: FruitListInteractor! { get set }
-    var router: FruitListRouter! { get set }
-    
     @discardableResult
     func reload(showLoading: Bool) -> Promise<Void>
     func getFruitCount() -> Int?
