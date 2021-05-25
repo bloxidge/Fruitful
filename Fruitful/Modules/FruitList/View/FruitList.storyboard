@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ni3-he-wlU">
-                                <rect key="frame" x="16" y="60" width="382" height="802"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u35-d5-jEI">
                                     <size key="itemSize" width="160" height="120"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FruitListCollectionViewCell" id="DHy-OU-yN6" customClass="FruitListCollectionViewCell" customModule="Fruitful" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                                        <rect key="frame" x="16" y="16" width="160" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iqR-yY-xfq">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
@@ -77,10 +77,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qRh-Vv-QiQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="5zi-Uh-6Cq"/>
-                            <constraint firstItem="ni3-he-wlU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="GYY-Hg-jl1"/>
-                            <constraint firstItem="ni3-he-wlU" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="K5U-nY-BxI"/>
+                            <constraint firstItem="ni3-he-wlU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="GYY-Hg-jl1"/>
+                            <constraint firstItem="ni3-he-wlU" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="K5U-nY-BxI"/>
                             <constraint firstItem="ni3-he-wlU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z6p-Ci-saG"/>
-                            <constraint firstItem="ni3-he-wlU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="c68-fV-JUX"/>
+                            <constraint firstItem="ni3-he-wlU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="c68-fV-JUX"/>
                             <constraint firstItem="kbZ-j1-USA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gzw-J9-Nx7"/>
                             <constraint firstItem="qRh-Vv-QiQ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="k5s-B2-jXK"/>
                             <constraint firstItem="P0U-6Z-Xgl" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="rgM-jh-Qkf"/>

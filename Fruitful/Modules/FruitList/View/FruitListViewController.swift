@@ -149,7 +149,8 @@ extension FruitListViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let isPortrait = collectionView.bounds.width < collectionView.bounds.height
         let cellsPerRow: CGFloat = isPortrait ? 2 : 4
-        let width = (collectionView.bounds.width - (Constants.cellSpacing * (cellsPerRow - 1))) / cellsPerRow
+        let contentWidth = collectionView.bounds.width - (Constants.cellSpacing * 2)
+        let width = (contentWidth - (Constants.cellSpacing * (cellsPerRow - 1))) / cellsPerRow
         return CGSize(width: width, height: width * 0.75)
     }
     
