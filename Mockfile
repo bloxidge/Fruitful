@@ -1,0 +1,13 @@
+sourceryCommand: null
+FruitfulTests:
+  sources:
+    include:
+    - ./Fruitful
+  output: ./FruitfulTests/Mocks/Mock.generated.swift
+  targets:
+  - FruitfulTests
+  testable:
+  - Fruitful
+  import:
+  - Foundation
+  - PromiseKit

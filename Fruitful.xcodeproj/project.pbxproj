@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,6 +48,9 @@
 		FDB5CC37265BBE3B00159141 /* TimeInterval+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */; };
 		FDB5CC39265BCF4500159141 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC38265BCF4500159141 /* ApiConfig.swift */; };
 		FDB5CC3B265BF1A400159141 /* ScreenAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC3A265BF1A400159141 /* ScreenAnalytics.swift */; };
+		FDB5CC3E265C251E00159141 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = FDB5CC3D265C251E00159141 /* SwiftyMocky */; };
+		FDB5CC42265C3FAF00159141 /* AutoMockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC41265C3FAF00159141 /* AutoMockable.swift */; };
+		FDB5CC45265C43A400159141 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5CC44265C43A400159141 /* Mock.generated.swift */; };
 		FDEACC2F2659C62600D0A756 /* FruitDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +108,8 @@
 		FDB5CC36265BBE3B00159141 /* TimeInterval+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Utils.swift"; sourceTree = "<group>"; };
 		FDB5CC38265BCF4500159141 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		FDB5CC3A265BF1A400159141 /* ScreenAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAnalytics.swift; sourceTree = "<group>"; };
+		FDB5CC41265C3FAF00159141 /* AutoMockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockable.swift; sourceTree = "<group>"; };
+		FDB5CC44265C43A400159141 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		FDEACC2E2659C62600D0A756 /* FruitDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FruitDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB5CC3E265C251E00159141 /* SwiftyMocky in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				FD53C91E2659193F0046D485 /* FruitfulTests.swift */,
+				FDB5CC43265C43A400159141 /* Mocks */,
 				FD53C94226592D250046D485 /* Supporting Files */,
 			);
 			path = FruitfulTests;
@@ -353,6 +360,7 @@
 				FD53C9642659EA8C0046D485 /* Extensions */,
 				FD53C95C265959780046D485 /* DesignableView.swift */,
 				FD53C98B2659F7970046D485 /* NibBackedView.swift */,
+				FDB5CC41265C3FAF00159141 /* AutoMockable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -394,6 +402,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FDB5CC43265C43A400159141 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FDB5CC44265C43A400159141 /* Mock.generated.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +438,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD53C9312659193F0046D485 /* Build configuration list for PBXNativeTarget "FruitfulTests" */;
 			buildPhases = (
+				FDB5CC3F265C25FC00159141 /* Generate Mocks */,
 				FD53C9162659193F0046D485 /* Sources */,
 				FD53C9172659193F0046D485 /* Frameworks */,
 				FD53C9182659193F0046D485 /* Resources */,
@@ -432,6 +449,9 @@
 				FD53C91C2659193F0046D485 /* PBXTargetDependency */,
 			);
 			name = FruitfulTests;
+			packageProductDependencies = (
+				FDB5CC3D265C251E00159141 /* SwiftyMocky */,
+			);
 			productName = FruitfulTests;
 			productReference = FD53C91A2659193F0046D485 /* FruitfulTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -466,6 +486,7 @@
 			packageReferences = (
 				FD53C9372659264B0046D485 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				FD7015A0265BC60A00E72899 /* XCRemoteSwiftPackageReference "Foundation" */,
+				FDB5CC3C265C251E00159141 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
 			);
 			productRefGroup = FD53C9052659193C0046D485 /* Products */;
 			projectDirPath = "";
@@ -499,6 +520,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FDB5CC3F265C25FC00159141 /* Generate Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mocks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/xcrun --sdk macosx bash";
+			shellScript = "scripts/generate-mocks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD53C9002659193C0046D485 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -527,6 +570,7 @@
 				FD53C98A2659F3A60046D485 /* SceneDelegate.swift in Sources */,
 				FDB5CC3B265BF1A400159141 /* ScreenAnalytics.swift in Sources */,
 				FD53C98C2659F7970046D485 /* NibBackedView.swift in Sources */,
+				FDB5CC42265C3FAF00159141 /* AutoMockable.swift in Sources */,
 				FD701595265BC60A00E72899 /* HttpMethod.swift in Sources */,
 				FD53C90C2659193C0046D485 /* FruitListViewController.swift in Sources */,
 				FD53C9082659193C0046D485 /* AppDelegate.swift in Sources */,
@@ -545,6 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB5CC45265C43A400159141 /* Mock.generated.swift in Sources */,
 				FD53C91F2659193F0046D485 /* FruitfulTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,6 +779,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "FruitfulTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -755,6 +801,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "FruitfulTests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -820,6 +867,14 @@
 				minimumVersion = 3.3.0;
 			};
 		};
+		FDB5CC3C265C251E00159141 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -832,6 +887,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD7015A0265BC60A00E72899 /* XCRemoteSwiftPackageReference "Foundation" */;
 			productName = PMKFoundation;
+		};
+		FDB5CC3D265C251E00159141 /* SwiftyMocky */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDB5CC3C265C251E00159141 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyMocky;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
