@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FruitDetailViewState {
+enum FruitDetailViewState: Equatable {
     case initial(Fruit)
 }
 

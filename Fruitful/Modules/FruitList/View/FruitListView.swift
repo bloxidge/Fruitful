@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FruitListViewState {
+enum FruitListViewState: Equatable {
     case initial
     case loading
     case doneResults
