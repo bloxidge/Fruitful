@@ -35,15 +35,15 @@ class FruitListPresenterImpl: FruitListPresenter {
         
         let promise = interactor.fetchAllFruit()
         promise.done { [weak self] fruit in
-                if fruit.isEmpty {
-                    self?.view.updateView(state: .doneEmpty)
-                } else {
-                    self?.view.updateView(state: .doneResults)
-                }
-            }.catch { [weak self] error in
-                AnalyticsServiceImpl.shared.track(event: .error(error.localizedDescription))
-                self?.view.updateView(state: .error)
+            if fruit.isEmpty {
+                self?.view.updateView(state: .doneEmpty)
+            } else {
+                self?.view.updateView(state: .doneResults)
             }
+        }.catch { [weak self] error in
+            AnalyticsServiceImpl.shared.track(event: .error(error.localizedDescription))
+            self?.view.updateView(state: .error)
+        }
         return promise.asVoid()
     }
     
