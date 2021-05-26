@@ -39,8 +39,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdH-Pb-bS2">
-                                <rect key="frame" x="20.5" y="60" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdH-Pb-bS2">
+                                <rect key="frame" x="20" y="60" width="30" height="30"/>
                                 <connections>
                                     <action selector="closePressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n6s-jf-zuA"/>
                                 </connections>
@@ -52,6 +52,7 @@
                             <constraint firstItem="ORc-8C-Jya" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.8" id="9U5-VA-dDh"/>
                             <constraint firstItem="ORc-8C-Jya" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="AH9-Jz-kbi"/>
                             <constraint firstItem="ORc-8C-Jya" firstAttribute="top" secondItem="TdH-Pb-bS2" secondAttribute="bottom" constant="32" id="Qbo-2V-sGD"/>
+                            <constraint firstItem="TdH-Pb-bS2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="snv-Lp-Zq1"/>
                             <constraint firstItem="TdH-Pb-bS2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="zgz-EG-wGz"/>
                         </constraints>
                     </view>
