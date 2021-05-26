@@ -13,9 +13,11 @@ class FruitListViewController: UIViewController {
         static let cellSpacing: CGFloat = 16
     }
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var noResultsContainer: UIStackView!
+    @IBOutlet weak var noResultsLabel: UILabel!
     @IBOutlet weak var reloadButton: RoundedBorderButton!
     
     var presenter: FruitListPresenter!
@@ -23,6 +25,7 @@ class FruitListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        styleViews()
         setUpCollectionView()
         
         presenter.attachToView()
@@ -44,6 +47,18 @@ class FruitListViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         
         collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        styleViews()
+    }
+    
+    private func styleViews() {
+        titleLabel.font = .titleStyle()
+        noResultsLabel.font = .bodyStyle(size: 16)
+        reloadButton.titleLabel?.font = .bodyStyle(size: 18)
     }
     
     private func setUpCollectionView() {

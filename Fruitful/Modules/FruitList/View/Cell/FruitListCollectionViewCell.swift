@@ -15,8 +15,9 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
     
     @IBInspectable
     var title: String? {
-        willSet {
-            titleLabel.text = newValue?.capitalized
+        didSet {
+            titleLabel.text = title?.capitalized
+            setAccessibilityTraits()
         }
     }
     
@@ -30,8 +31,26 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
         loadFromNib()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        titleLabel.font = titleLabel.font.withSize(bounds.height / 5)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        styleViews()
+    }
+    
+    private func styleViews() {
+        titleLabel.font = .cellStyle()
+    }
+    
+    private func setAccessibilityTraits() {
+        isAccessibilityElement = true
+        accessibilityTraits = .button
+        accessibilityLabel = title
+        if let title = title {
+            accessibilityHint = "Double-tap for details about \(title)"
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        styleViews()
     }
 }

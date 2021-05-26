@@ -18,6 +18,8 @@ class FruitDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        styleViews()
+        
         presenter.attachToView()
     }
     
@@ -25,6 +27,18 @@ class FruitDetailViewController: UIViewController {
         super.viewDidAppear(animated)
         
         AnalyticsServiceImpl.shared.track(screenEvent: .displayed(.fruitDetail))
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        styleViews()
+    }
+    
+    private func styleViews() {
+        titleLabel.font = .detailTitleStyle()
+        priceLabel.font = .bodyStyle()
+        weightLabel.font = .bodyStyle()
     }
     
     @IBAction func closePressed() {
