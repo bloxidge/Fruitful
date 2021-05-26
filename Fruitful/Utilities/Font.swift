@@ -45,7 +45,7 @@ extension UIFont {
                               textStyle: .subheadline)
     }
     
-    static func detailStyle(size: CGFloat = 20) -> UIFont {
+    static func bodyStyle(size: CGFloat = 20) -> UIFont {
         return makeAccessible(font: futuraFont(ofSize: size),
                               textStyle: .body)
     }

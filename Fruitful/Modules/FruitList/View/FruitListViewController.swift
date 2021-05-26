@@ -17,6 +17,7 @@ class FruitListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var noResultsContainer: UIStackView!
+    @IBOutlet weak var noResultsLabel: UILabel!
     @IBOutlet weak var reloadButton: RoundedBorderButton!
     
     var presenter: FruitListPresenter!
@@ -56,6 +57,8 @@ class FruitListViewController: UIViewController {
     
     private func styleViews() {
         titleLabel.font = .titleStyle()
+        noResultsLabel.font = .bodyStyle(size: 16)
+        reloadButton.titleLabel?.font = .bodyStyle(size: 18)
     }
     
     private func setUpCollectionView() {

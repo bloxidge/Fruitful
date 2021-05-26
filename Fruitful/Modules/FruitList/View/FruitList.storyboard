@@ -70,20 +70,21 @@
                                 <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kbZ-j1-USA">
-                                <rect key="frame" x="132.5" y="392" width="149.5" height="80"/>
+                                <rect key="frame" x="147" y="400" width="120" height="69"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBD-oj-ztn">
-                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results found" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBD-oj-ztn">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="21"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <color key="textColor" systemColor="placeholderTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0U-6Z-Xgl" customClass="RoundedBorderButton" customModule="Fruitful" customModuleProvider="target">
-                                        <rect key="frame" x="26.5" y="42" width="96" height="38"/>
+                                        <rect key="frame" x="19" y="37" width="82" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="96" id="u3p-JB-j1F"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
                                         <state key="normal" title="Reload">
                                             <color key="titleColor" systemColor="placeholderTextColor"/>
                                         </state>
@@ -92,6 +93,11 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="u3p-JB-j1F"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="reloadPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EdB-ac-t5g"/>
                                         </connections>
@@ -107,6 +113,7 @@
                             <constraint firstItem="ni3-he-wlU" firstAttribute="top" secondItem="D35-CZ-5vf" secondAttribute="bottom" id="GYY-Hg-jl1"/>
                             <constraint firstItem="ni3-he-wlU" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="K5U-nY-BxI"/>
                             <constraint firstItem="D35-CZ-5vf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Kni-21-sIJ"/>
+                            <constraint firstItem="kbZ-j1-USA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="U57-2b-pEF"/>
                             <constraint firstItem="ni3-he-wlU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z6p-Ci-saG"/>
                             <constraint firstItem="ni3-he-wlU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="c68-fV-JUX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D35-CZ-5vf" secondAttribute="trailing" id="cQF-WY-e5U"/>
@@ -121,6 +128,7 @@
                         <outlet property="activityIndicator" destination="qRh-Vv-QiQ" id="Nld-sh-eFf"/>
                         <outlet property="collectionView" destination="ni3-he-wlU" id="OTo-7n-amb"/>
                         <outlet property="noResultsContainer" destination="kbZ-j1-USA" id="RlF-Pd-REy"/>
+                        <outlet property="noResultsLabel" destination="yBD-oj-ztn" id="Un6-Wc-f3K"/>
                         <outlet property="reloadButton" destination="P0U-6Z-Xgl" id="WLf-CA-lwK"/>
                         <outlet property="titleLabel" destination="vHj-Rk-2X5" id="WnG-Ye-jn8"/>
                     </connections>
@@ -132,7 +140,7 @@
     </scenes>
     <designables>
         <designable name="P0U-6Z-Xgl">
-            <size key="intrinsicContentSize" width="64" height="38"/>
+            <size key="intrinsicContentSize" width="82" height="32"/>
         </designable>
     </designables>
     <resources>

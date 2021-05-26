@@ -37,8 +37,8 @@ class FruitDetailViewController: UIViewController {
     
     private func styleViews() {
         titleLabel.font = .detailTitleStyle()
-        priceLabel.font = .detailStyle()
-        weightLabel.font = .detailStyle()
+        priceLabel.font = .bodyStyle()
+        weightLabel.font = .bodyStyle()
     }
     
     @IBAction func closePressed() {
