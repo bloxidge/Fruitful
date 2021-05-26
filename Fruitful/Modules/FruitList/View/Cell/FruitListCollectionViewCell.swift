@@ -30,8 +30,17 @@ class FruitListCollectionViewCell: UICollectionViewCell, NibBackedView {
         loadFromNib()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        titleLabel.font = titleLabel.font.withSize(bounds.height / 5)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        styleViews()
+    }
+    
+    private func styleViews() {
+        titleLabel.font = .cellStyle()
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        styleViews()
     }
 }

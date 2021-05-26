@@ -42,6 +42,7 @@
 		FD7015A2265BC60A00E72899 /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FD7015A1265BC60A00E72899 /* PMKFoundation */; };
 		FD7015A5265BC60A00E72899 /* GetFruitDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */; };
 		FD75F84A265A9C85004416E1 /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */; };
+		FD787963265E2EE600374029 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD787962265E2EE600374029 /* Font.swift */; };
 		FD931C5E265D24F200F37AB3 /* XCTestExpectation+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */; };
 		FD931C62265D291C00F37AB3 /* FruitFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD931C61265D291C00F37AB3 /* FruitFixtures.swift */; };
 		FD931C64265D29B800F37AB3 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53C951265953690046D485 /* Fruit.swift */; };
@@ -107,6 +108,7 @@
 		FD70159C265BC60A00E72899 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		FD7015A4265BC60A00E72899 /* GetFruitDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFruitDataRequest.swift; sourceTree = "<group>"; };
 		FD75F849265A9C85004416E1 /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		FD787962265E2EE600374029 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FD931C5D265D24F200F37AB3 /* XCTestExpectation+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestExpectation+Promise.swift"; sourceTree = "<group>"; };
 		FD931C61265D291C00F37AB3 /* FruitFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitFixtures.swift; sourceTree = "<group>"; };
 		FD931C65265D325000F37AB3 /* FruitDetailPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailPresenterTests.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				FD53C95C265959780046D485 /* DesignableView.swift */,
 				FD53C98B2659F7970046D485 /* NibBackedView.swift */,
 				FDB5CC41265C3FAF00159141 /* AutoMockable.swift */,
+				FD787962265E2EE600374029 /* Font.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				FD06C7DE265D21F700D1B497 /* AnalyticsService.swift in Sources */,
 				FD701598265BC60A00E72899 /* HttpHeader.swift in Sources */,
 				FD701591265BC54500E72899 /* ApiService.swift in Sources */,
+				FD787963265E2EE600374029 /* Font.swift in Sources */,
 				FD06C7E0265D265F00D1B497 /* AnalyticsEvent.swift in Sources */,
 				FD70159D265BC60A00E72899 /* ApiError.swift in Sources */,
 				FD2E098D265963F6006D3459 /* FruitDetailViewController.swift in Sources */,
