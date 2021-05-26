@@ -162,11 +162,23 @@ extension FruitListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let isPortrait = collectionView.bounds.width < collectionView.bounds.height
-        let cellsPerRow: CGFloat = isPortrait ? 2 : 4
+        let cellsPerRow = CGFloat(getCellsPerRow(portrait: collectionView.bounds.width < collectionView.bounds.height,
+                                                 isPad: UIDevice.current.userInterfaceIdiom == .pad))
         let contentWidth = collectionView.bounds.width - (Constants.cellSpacing * 2)
         let width = (contentWidth - (Constants.cellSpacing * (cellsPerRow - 1))) / cellsPerRow
         return CGSize(width: width, height: width * 0.75)
+    }
+    
+    private func getCellsPerRow(portrait: Bool, isPad: Bool) -> Int {
+        switch (portrait, isPad) {
+        case (true, false):
+            return 2
+        case (false, false),
+             (true, true):
+            return 4
+        case (false, true):
+            return 6
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
